@@ -8,8 +8,11 @@ class admin extends CI_Controller
     }
 
     public function index(){
-        echo 'admin';
-        die();
-        $this->load->view('');
+
+        $this->load->view('admin_view');
+    }
+
+    public function dashboard(){
+        $this->load->view('admin_dashboard');
     }
 }
