@@ -15,25 +15,26 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/magic-check.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/styleKM.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/style/styleGunk.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/responsivGk.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/slickGk.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/slick-themeGk.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/stylemv.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/stylege.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/stylemv.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/stylege.css">
-    <script type="text/javascript" src="<?= base_url(); ?>public/js/file.js"></script>
-
-
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/mainSekil.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/normalizeSekil.css"/>
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/demoSekil.css"/>
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/componentSekil.css"/>
+<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/magic-check.css">-->
+<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/styleKM.css">-->
+<!--    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">-->
+<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/style/styleGunk.css">-->
+<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/responsivGk.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/slickGk.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/slick-themeGk.css">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylemv.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylege.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylemv.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylege.css">-->
+<!--    <script type="text/javascript" src="--><?//= base_url(); ?><!--public/js/file.js"></script>-->
+<!---->
+<!---->
+<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/mainSekil.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/normalizeSekil.css"/>-->
+<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/demoSekil.css"/>-->
+<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/componentSekil.css"/>-->
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/main.css">
     <title>Elan</title>
     <script>(function (e, t, n) {
             var r = e.querySelectorAll("html")[0];

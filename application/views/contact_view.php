@@ -30,7 +30,7 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/stylemv.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/stylege.css">
     <script type="text/javascript" src="<?= base_url(); ?>public/js/file.js"></script>
-
+<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/main.css">-->
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/mainSekil.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/normalizeSekil.css"/>
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/demoSekil.css"/>
@@ -122,7 +122,7 @@
                     <ul class=" empy13 contact-list list-inline col-lg-12 padding0">
                         <li class="col-lg-3"><img src="<?= base_url(); ?>uploads/fb1.png" class=" bor img-responsive" alt="Facebook icon">
                         </li>
-                        <li class="col-lg-9"><a href="#"><h1 class="fb">/evyoldaşı.az</h1></a></li>
+                        <li class="col-lg-9"><a href="#"><h1 class="fb">/evyoldashi.az</h1></a></li>
 
 
                     </ul>
@@ -130,13 +130,13 @@
                     <ul class="contact-list list-inline col-lg-12 padding0">
                         <li class="col-lg-3"><img src="<?= base_url(); ?>uploads/tw2.png" class=" bor img-responsive" alt="Twitter icon">
                         </li>
-                        <li class="col-lg-9"><a href="#"><h1 class="tw">@evyoldaşı.az</h1></a></li>
+                        <li class="col-lg-9"><a href="#"><h1 class="tw">@evyoldashi.az</h1></a></li>
                     </ul>
 
                     <ul class="contact-list list-inline col-lg-12 padding0">
                         <li class="col-lg-3"><img src="<?= base_url(); ?>uploads/g3.png" class=" bor img-responsive" alt="Twitter icon">
                         </li>
-                        <li class="col-lg-9"><a href="#"><h1 class="gmaill">+evyoldaşı.az</h1></a></li>
+                        <li class="col-lg-9"><a href="#"><h1 class="gmaill">+evyoldashi.az</h1></a></li>
 
 
                     </ul>

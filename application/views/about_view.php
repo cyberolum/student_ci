@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/about.css">
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/bootstrap/css/bootstrap.css">-->
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/css/about.css">-->
 
     <script
             src="https://code.jquery.com/jquery-3.1.1.js"
@@ -17,20 +17,21 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/css/magic-check.css">
-    <link rel="stylesheet" href="../public/css/styleKM.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../public/style/styleGunk.css">
-
-    <link rel="stylesheet" href="../public/css/responsivGk.css">
-    <link rel="stylesheet" type="text/css" href="../public/css/slickGk.css">
-    <link rel="stylesheet" type="text/css" href="../public/css/slick-themeGk.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../public/css/stylemv.css">
-    <link rel="stylesheet" type="text/css" href="../public/css/stylege.css">
-    <link rel="stylesheet" type="text/css" href="../public/css/stylemv.css">
-    <link rel="stylesheet" type="text/css" href="../public/css/stylege.css">
-    <script type="text/javascript" src="../public/js/file.js"></script>
+    <!--    <link rel="stylesheet" href="../public/css/magic-check.css">-->
+    <!--    <link rel="stylesheet" href="../public/css/styleKM.css">-->
+    <!--    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">-->
+    <!--    <link rel="stylesheet" href="../public/style/styleGunk.css">-->
+    <!---->
+    <!--    <link rel="stylesheet" href="../public/css/responsivGk.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="../public/css/slickGk.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="../public/css/slick-themeGk.css">-->
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--    <link rel="stylesheet" type="text/css" href="../public/css/stylemv.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="../public/css/stylege.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="../public/css/stylemv.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="../public/css/stylege.css">-->
+    <!--    <script type="text/javascript" src="../public/js/file.js"></script>-->
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/main.css">
 
     <title></title>
 </head>
@@ -46,7 +47,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= base_url(); ?>home/"><img src="<?= base_url(); ?>uploads/Home.png" alt=""></a>
+                    <a class="navbar-brand" href="<?= base_url(); ?>home/"><img src="<?= base_url(); ?>uploads/Home.png"
+                                                                                alt=""></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
@@ -158,6 +160,13 @@
                         <p>Developer</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="copyright text-center" style="margin-top: 100px;">
+                <p>&copy; 2016 evyoldaşı.az All Rights Reserved.</p>
             </div>
         </div>
     </div>

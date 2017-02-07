@@ -14,12 +14,13 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/stylege.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/stylemv2.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/stylemv.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/style.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/styleMv3.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/demoSekil.css"/>
+<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylege.css">-->
+<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/stylemv2.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylemv.css">-->
+<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/style.css">-->
+<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/styleMv3.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/demoSekil.css"/>-->
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/main.css">
     <script type="text/javascript" src="<?= base_url(); ?>public/js/file.js"></script>
     <script type="text/javascript" src="<?= base_url(); ?>public/js/javascriptmv2.js"></script>
 </head>

@@ -17,10 +17,11 @@
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/prof1Gk.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/responsivGk.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/stylemv.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/stylege.css">
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/css/prof1Gk.css">-->
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/css/responsivGk.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/stylemv.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/stylege.css">-->
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/main.css">
     <script type="text/javascript" src="<?= base_url(); ?>public/js/file.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -39,26 +40,27 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= base_url(); ?>home/"><img src="<?= base_url(); ?>uploads/Home.png" alt=""></a>
+                    <a class="navbar-brand" href="<?= base_url(); ?>home/"><img src="<?= base_url(); ?>uploads/Home.png"
+                                                                                alt=""></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li class="navbarli1">
-			       <span class="navbarli1icon glyphicon glyphicon-home ">
+			                <span class="navbarli1icon glyphicon glyphicon-home ">
 			       			<a href="<?= base_url(); ?>home/">Ana səhifə</a>
-			       	</span>
+			       	        </span>
 
                         </li>
 
                         <li class="navbarli4">
-				  	 <span class="navbarli4icon glyphicon glyphicon-info-sign">
+				  	        <span class="navbarli4icon glyphicon glyphicon-info-sign">
 				        	<a href="<?= base_url(); ?>home/about">Haqqımızda</a>
-				    </span>
+				            </span>
                         </li>
                         <li class="navbarli2">
-				  	 <span class="navbarli2icon glyphicon glyphicon-phone">
+				  	        <span class="navbarli2icon glyphicon glyphicon-phone">
 				        	<a href="<?= base_url(); ?>home/contact">Əlaqə</a>
-				    </span>
+				            </span>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -86,7 +88,8 @@
             </div>
             <div class="col-md-8">
                 <div class="col-md-12 redakte">
-                    <a href="<?= base_url(); ?>editprofil/" class="redakteIcon"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    <a href="<?= base_url(); ?>editprofil/" class="redakteIcon"> <i class="fa fa-pencil-square-o"
+                                                                                    aria-hidden="true"></i>
                     </a>
                 </div>
                 <div class="col-md-12 profilinSahibi ">
