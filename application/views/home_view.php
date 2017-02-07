@@ -47,26 +47,26 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=""><img src="<?= base_url(); ?>uploads/Home.png" alt=""></a>
+                    <a class="navbar-brand" href="<?= base_url(); ?>home/"><img src="<?= base_url(); ?>uploads/Home.png" alt=""></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li class="navbarli1">
              <span class="navbarli1icon glyphicon glyphicon-home ">
-                  <a href="index">Ana səhifə</a>
+                  <a href="<?= base_url(); ?>home/">Ana səhifə</a>
               </span>
 
                         </li>
                         <li class="navbarli4">
              <span class="navbarli4icon glyphicon glyphicon-info-sign">
-                  <a href="about">Haqqımızda</a>
+                  <a href="<?= base_url(); ?>home/about">Haqqımızda</a>
               </span>
 
                         </li>
 
                         <li class="navbarli2">
              <span class="navbarli2icon glyphicon glyphicon-phone">
-                  <a href="contact">Əlaqə</a>
+                  <a href="<?= base_url(); ?>home/contact">Əlaqə</a>
             </span>
                         </li>
 
@@ -74,7 +74,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="navbarli3">
                             <center>  <span class="navbarli3icon glyphicon glyphicon-user">
-                  <a href="../auth/login">Giriş / Qeydiyyat</a>
+                  <a href="<?= base_url(); ?>auth/login">Giriş / Qeydiyyat</a>
                 </span></center>
                         </li>
                     </ul>
