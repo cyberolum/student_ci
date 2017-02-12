@@ -72,13 +72,28 @@
                         </li>
 
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="navbarli3">
-                            <center>  <span class="navbarli3icon glyphicon glyphicon-user">
-                  <a href="<?= base_url(); ?>auth/login">Giriş / Qeydiyyat</a>
+                    <?php if (isset($_SESSION['logout'])) { ?>
+                         <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <center>  <span class=" glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>auth/logout">Çıxış</a>
                 </span></center>
                         </li>
                     </ul>
+
+                 <?php   }
+                 else{ ?>
+
+                  <ul class="nav navbar-nav navbar-right">
+                        <li class="navbarli3">
+                            <center>  <span class="navbarli3icon glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>auth/">Giriş / Qeydiyyat</a>
+                </span></center>
+                        </li>
+                    </ul>
+                <?php }
+
+                     ?>
                 </div>
             </div>
         </nav>

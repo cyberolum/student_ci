@@ -25,4 +25,7 @@ class home extends CI_Controller
         //About ile bagli sehifeye kecid
         $this->load->view('about_view');
     }
+
+    
+
 }

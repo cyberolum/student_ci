@@ -82,7 +82,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="navbarli3">
                             <center>  <span class="navbarli3icon glyphicon glyphicon-user">
-                  <a href="<?= base_url(); ?>auth/login">Giriş / Qeydiyyat</a>
+                  <a href="<?= base_url(); ?>auth/index">Giriş / Qeydiyyat</a>
                 </span></center>
                         </li>
                     </ul>
