@@ -38,23 +38,43 @@
                     <br/>
                     <span class="text-lg text-bold text-primary">MATERIAL ADMIN</span>
                     <br/><br/>
-                    <form class="form floating-label" action="<?= base_url(); ?>admin/dashboard" accept-charset="utf-8" method="post">
+                    <form class="form floating-label" action="<?= base_url(); ?>adminController/adminLogin" accept-charset="utf-8" method="post">
+
                         <div class="form-group">
-                            <input type="text" class="form-control" id="username" name="username">
-                            <label for="username">Username</label>
+                            <input type="email" class="form-control" id="username" name="email">
+                            <label for="username">Email</label>
                         </div>
+                           <?php
+//                              echo (form_error('email'));
+                           if(form_error('email')){?>
+                               <div ><p style="color:#E57C67">Email-i boş buraxmayın</p></div>
+                           <?php }?>
+
                         <div class="form-group">
                             <input type="password" class="form-control" id="password" name="password">
                             <label for="password">Password</label>
-                            <p class="help-block"><a href="#">Forgotten?</a></p>
+<!--                            <p class="help-block"><a href="#">Forgotten?</a></p>-->
                         </div>
+                        <?php
+                        if(form_error('password')){?>
+                            <div ><p style="color:#E57C67">Şifrə-ni boş buraxmayın</p></div>
+                        <?php }?>
+
+                        <?php
+                        if(isset($_SESSION['yalniw'])){ ?>
+                            <div ><p style="color:#E57C67">Sehvlik var</p></div>
+                     <?php
+                        unset($_SESSION['yalniw']);
+                        }
+                        ?>
+
                         <br/>
                         <div class="row">
                             <div class="col-xs-6 text-left">
                                 <div class="checkbox checkbox-inline checkbox-styled">
-                                    <label>
-                                        <input type="checkbox"> <span>Remember me</span>
-                                    </label>
+<!--                                    <label>-->
+<!--                                        <input type="checkbox"> <span>Remember me</span>-->
+<!--                                    </label>-->
                                 </div>
                             </div><!--end .col -->
                             <div class="col-xs-6 text-right">
@@ -63,23 +83,23 @@
                         </div><!--end .row -->
                     </form>
                 </div><!--end .col -->
-                <div class="col-sm-5 col-sm-offset-1 text-center">
-                    <br><br>
-                    <h3 class="text-light">
-                        No account yet?
-                    </h3>
-                    <a class="btn btn-block btn-raised btn-primary" href="#">Sign up here</a>
-                    <br><br>
-                    <h3 class="text-light">
-                        or
-                    </h3>
-                    <p>
-                        <a href="#" class="btn btn-block btn-raised btn-info"><i class="fa fa-facebook pull-left"></i>Login with Facebook</a>
-                    </p>
-                    <p>
-                        <a href="#" class="btn btn-block btn-raised btn-info"><i class="fa fa-twitter pull-left"></i>Login with Twitter</a>
-                    </p>
-                </div><!--end .col -->
+<!--                <div class="col-sm-5 col-sm-offset-1 text-center">-->
+<!--                    <br><br>-->
+<!--                    <h3 class="text-light">-->
+<!--                        No account yet?-->
+<!--                    </h3>-->
+<!--                    <a class="btn btn-block btn-raised btn-primary" href="#">Sign up here</a>-->
+<!--                    <br><br>-->
+<!--                    <h3 class="text-light">-->
+<!--                        or-->
+<!--                    </h3>-->
+<!--                    <p>-->
+<!--                        <a href="#" class="btn btn-block btn-raised btn-info"><i class="fa fa-facebook pull-left"></i>Login with Facebook</a>-->
+<!--                    </p>-->
+<!--                    <p>-->
+<!--                        <a href="#" class="btn btn-block btn-raised btn-info"><i class="fa fa-twitter pull-left"></i>Login with Twitter</a>-->
+<!--                    </p>-->
+<!--                </div><!--end .col -->
             </div><!--end .row -->
         </div><!--end .card-body -->
     </div><!--end .card -->

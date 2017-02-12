@@ -220,7 +220,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="button" name="button" class="btn btn-lg btn-block elaveEtNew">Əlavə et</button>
+                        <button type="submit" name="button" class="btn btn-lg btn-block elaveEtNew">Əlavə et</button>
                     </div>
                 </div>
             </div>
