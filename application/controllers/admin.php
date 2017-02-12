@@ -9,7 +9,7 @@ class admin extends CI_Controller
 
     public function index(){
 
-        $this->load->view('admin_view');
+        $this->load->view('admi n_view');
     }
 
     public function dashboard(){

@@ -23,12 +23,6 @@
   color: white;
 }
 
-form{
-  width: 50%;
-  margin: 0 auto;
-  position: relative;
-}
-
 .search-type{
   display: inline-block;
   padding: 10px 35px 50px 35px;

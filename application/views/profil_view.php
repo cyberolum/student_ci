@@ -134,7 +134,7 @@
                 </div>
 
                 <div class="col-md-12">
-                    <button class="addAnnouncement btn btn-secondary btn-lg btn-block"><a href="">Elave et</a></button>
+                    <button class="addAnnouncement btn btn-secondary btn-lg btn-block"><a href="<?= base_url(); ?>addAds/">Elave et</a></button>
                 </div>
 
             </div>
@@ -154,28 +154,25 @@
 
 <div class="container" style="margin-top:25px;">
     <div class="row">
+        <?php foreach ($showAds as $allAds) {?>
         <div class="col-md-12 yerlesdirdiyiElanlar">
             <div class="col-md-4">
                 <img class="ElanSekil" src="<?= base_url(); ?>uploads/ev1.jpg" alt="">
             </div>
-
-
             <div class="col-md-8">
                 <div class="col-md-12 yerlesdiyiYer">
-                    <h3>Yerləşdiyi yer</h3>
+                    <h3><?= $allAds['ads_address'] ?></h3>
                 </div>
                 <div class="col-md-12 ">
                     <a><i class="fa fa-map-marker Unvan" aria-hidden="true"></i></a>
-                    <h4 class="UnvaniHaqqindaMelumat">28 May</h4>
+                    <h4 class="UnvaniHaqqindaMelumat"><?= $allAds['mark'] ?></h4>
                 </div>
                 <div class="col-md-12 sahe_OtaqSayi">
                     <div class="col-md-12 " style="top:20px;">
-                        <h6 class="Sahesi">Sahe</h6>
                         <h6 class="OtaqSayi" style="margin-left: 65px;">Otaq sayı</h6>
                     </div>
                     <div class="col-md-12 sahe_OtaqSayi_reqemIle">
-                        <h6 class="Sahesi">160</h6>
-                        <h6 class="OtaqSayi" style="margin-left: 95px; ">3</h6>
+                        <h6 class="OtaqSayi" style="margin-left: 95px; "><?= $allAds['room'] ?></h6>
                     </div>
 
                 </div>
@@ -184,10 +181,11 @@
                     <div class="col-md-12" style="margin-top:30px; margin-left:-30px">
                         <div class="col-md-8">
                             <a><i class="fa fa-user Sahibkar" aria-hidden="true"></i></a>
-                            <h4 class="AdSoyad">Mahir Vəliyev</h4>
+                            <h4 class="AdSoyad"><?= $allAds['ads_user_name'] ?></h4>
                         </div>
                         <div class="col-md-4">
-                            <h4 class="Tarix">11.12.16</h4>
+                            <a href="<?= base_url('addAds/delete/'.$allAds['id']);?>">Sil</a>
+                            <a href="<?= base_url('addAds/updatePage/'.$allAds['id']); ?>">Yenile</a>
                         </div>
                     </div>
 
@@ -196,96 +194,7 @@
 
             </div>
         </div>
-
-
-        <div class="col-md-12 yerlesdirdiyiElanlar">
-            <div class="col-md-4">
-                <img class="ElanSekil" src="<?= base_url(); ?>uploads/ev3.jpg" alt="">
-            </div>
-
-
-            <div class="col-md-8">
-                <div class="col-md-12 yerlesdiyiYer">
-                    <h3>Yerleşdiyi yer</h3>
-                </div>
-                <div class="col-md-12 ">
-                    <a><i class="fa fa-map-marker Unvan" aria-hidden="true"></i></a>
-                    <h4 class="UnvaniHaqqindaMelumat">28 May</h4>
-                </div>
-                <div class="col-md-12 sahe_OtaqSayi">
-                    <div class="col-md-12 " style="top:20px;">
-                        <h6 class="Sahesi">Sahe</h6>
-                        <h6 class="OtaqSayi" style="margin-left: 65px;">Otaq sayı</h6>
-                    </div>
-                    <div class="col-md-12 sahe_OtaqSayi_reqemIle">
-                        <h6 class="Sahesi">160</h6>
-                        <h6 class="OtaqSayi" style="margin-left: 95px; ">3</h6>
-                    </div>
-
-                </div>
-
-                <div class="col-md-12" style="top:40px; height:100px;">
-                    <div class="col-md-12" style="margin-top:30px; margin-left:-30px">
-                        <div class="col-md-8">
-                            <a><i class="fa fa-user Sahibkar" aria-hidden="true"></i></a>
-                            <h4 class="AdSoyad">name</h4>
-                        </div>
-                        <div class="col-md-4">
-                            <h4 class="Tarix">11.12.16</h4>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-        </div>
-
-
-        <div class="col-md-12 yerlesdirdiyiElanlar">
-            <div class="col-md-4">
-                <img class="ElanSekil" src="<?= base_url(); ?>uploads/ev5.jpg" alt="">
-            </div>
-
-
-            <div class="col-md-8">
-                <div class="col-md-12 yerlesdiyiYer">
-                    <h3>Yerleşdiyi yer</h3>
-                </div>
-                <div class="col-md-12 ">
-                    <a><i class="fa fa-map-marker Unvan" aria-hidden="true"></i></a>
-                    <h4 class="UnvaniHaqqindaMelumat">28 May</h4>
-                </div>
-                <div class="col-md-12 sahe_OtaqSayi">
-                    <div class="col-md-12 " style="top:20px;">
-                        <h6 class="Sahesi">Sahe</h6>
-                        <h6 class="OtaqSayi" style="margin-left: 65px;">Otaq sayı</h6>
-                    </div>
-                    <div class="col-md-12 sahe_OtaqSayi_reqemIle">
-                        <h6 class="Sahesi">160</h6>
-                        <h6 class="OtaqSayi" style="margin-left: 95px; ">3</h6>
-                    </div>
-
-                </div>
-
-                <div class="col-md-12" style="top:40px; height:100px;">
-                    <div class="col-md-12" style="margin-top:30px; margin-left:-30px">
-                        <div class="col-md-8">
-                            <a><i class="fa fa-user Sahibkar" aria-hidden="true"></i></a>
-                            <h4 class="AdSoyad">name</h4>
-                        </div>
-                        <div class="col-md-4">
-                            <h4 class="Tarix">11.12.16</h4>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-        </div>
-
-
+        <?php } ?>
     </div>
 
 </div>
