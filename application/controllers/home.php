@@ -5,12 +5,13 @@ class home extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->model('home_model');
     }
 
     public function index()
     {
-        //Esas index sehifesi
-        $this->load->view('home_view');
+        $viewData['mainAds'] = $this->home_model->select();
+        $this->load->view('home_view', $viewData);
     }
 
     public function contact()
@@ -24,4 +25,7 @@ class home extends CI_Controller
         //About ile bagli sehifeye kecid
         $this->load->view('about_view');
     }
+
+    
+
 }

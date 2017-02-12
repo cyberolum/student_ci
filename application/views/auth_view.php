@@ -64,7 +64,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="navbarli3">
                             <center>  <span class="navbarli3icon glyphicon glyphicon-user">
-				         	<a href="<?= base_url(); ?>auth/login">Giriş / Qeydiyyat</a>
+				         	<a href="<?= base_url(); ?>auth/index">Giriş / Qeydiyyat</a>
 				        </span></center>
                         </li>
                     </ul>
@@ -121,7 +121,7 @@
     <div class="row">
 
         <div class="s500">
-            <div class="col-md-4 col-md-offset-4">
+            <div class="col-md-12">
 
                 <div class="loginandregister">
                     <input class="loginler" type="button" value="Giriş">
@@ -131,31 +131,48 @@
                 <div class="xett"></div>
 
                 <div class="logino">
-                    <form class="form-group">
+                    <form class="form-group" method="POST" action="<?= base_url(); ?>auth/login" method="POST"">
                         <div class="input-group araMesafesi">
                             <div class="input-group-addon ">
                                 <span class="glyphicon glyphicon-envelope"></span>
                             </div>
-                            <input class="form-control" id="email" name="email" type="email"
+                            <input class="form-control" id="email" name="logemail" type="email"
                                    placeholder="E-poçt ünvanı">
                         </div>
+
+                            
                         <div class="input-group araMesafesi">
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-lock"></span>
                             </div>
-                            <input class="form-control" id="password" name="password" type="password"
+                            <input class="form-control" id="password" name="logpassword" type="password"
                                    placeholder="Şifrə">
                         </div>
 
-                        <button type="button" class="btn btn-secondary btn1">Daxil ol</button>
+
+                        <button type="submit" class="btn btn-secondary btn1">Daxil ol</button>
 
                         <br><br>
 
-                        <input type="checkbox"><span class="rem">Məni yadda saxla!</span>
+                        <!-- <input type="checkbox"><span class="rem">Məni yadda saxla!</span> -->
+
+                       
+
+
+                           <?php if(isset($_SESSION['invalidmailorpassword'])){ ?>
+
+                            <div style="padding-left: 13px">
+                                <p style="color:#E57C67"><?= $_SESSION['invalidmailorpassword']?></p>
+                            </div>
+                            
+                            <?php  
+                             unset($_SESSION['invalidmailorpassword']); }
+                            ?>
+                            
 
 
                         <br><br>
-                        <a href=""><span class="rem1">Şifrəni unutmusuz?</span></a>
+                        <!-- <a href=""><span class="rem1">Şifrəni unutmusuz?</span></a> -->
                         <br><br>
                         <br><br>
                     </form>
@@ -163,39 +180,83 @@
 
 
                 <div class="rege">
-                    <form class="form-group">
 
+                    <form class="form-group" action="<?= base_url(); ?>auth/register" method="POST">
+
+
+                <div class="col-md-6">
+                    
+                      <div class="input-group araMesafesi">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </div>
+                            <input class="form-control" id="username" name="regusername" type="text" placeholder="Ad">
+                        </div>
+
+                        <?php if(form_error('regusername')){ ?>
+                            <div style="text-align: center">
+                                <p style="color:#E57C67">Adı boş buraxmayın.</p>
+                            </div>
+                     <?php   }
+                        ?>
+
+                            
+                       
+                        
 
                         <div class="input-group araMesafesi">
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-user"></span>
                             </div>
-                            <input class="form-control" id="username" name="username" type="text" placeholder="Ad">
+                            <input class="form-control" id="surname" name="regsurname" type="text" placeholder="Soyad">
                         </div>
 
-
-                        <div class="input-group araMesafesi">
-                            <div class="input-group-addon">
-                                <span class="glyphicon glyphicon-user"></span>
+                         <?php if(form_error('regsurname')){ ?>
+                            <div style="text-align: center">
+                                <p style="color:#E57C67">Soyadı boş buraxmayın.</p>
                             </div>
-                            <input class="form-control" id="surname" name="surname" type="text" placeholder="Soyad">
-                        </div>
-
+                     <?php   }
+                        ?>
 
                         <div class="input-group araMesafesi">
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-lock"></span>
                             </div>
-                            <input class="form-control" id="password" name="password" type="password"
+                            <input class="form-control" id="password" name="regpassword" type="password"
                                    placeholder="Şifrə">
                         </div>
 
+                        <?php if(form_error('regpassword')){ ?>
+                            <div style="text-align: center">
+                                <p style="color:#E57C67">Şifrəni boş buraxmayın.</p>
+                            </div>
+                     <?php   }
+                        ?>
 
-                        <div class="input-group araMesafesi">
+                        <?php if(isset($_SESSION['passwordlong'])){ ?>
+                            <div style="text-align: center">
+                                <p style="color:#E57C67"><?= $_SESSION['passwordlong']?></p>
+                            </div>
+                            <?php  
+                             unset($_SESSION['passwordlong']); }
+                            ?>
+                     
+                </div>
+
+                      
+
+
+<!-- ------------------------------------------------------------- -->
+
+
+
+                <div class="col-md-6">
+                      
+                      <div class="input-group araMesafesi">
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-earphone "><span
                                             class="black">&nbsp;&nbsp;+</span><span class="helli">994</span> </span>
-                                <select id="operator-numbers" name="operator-numbers">
+                                <select id="operator-numbers" name="regoperator-numbers">
                                     <option>55</option>
                                     <option>51</option>
                                     <option>50</option>
@@ -203,30 +264,96 @@
                                     <option>77</option>
                                 </select>
                             </div>
-                            <input class="form-control" id="phone_number" name="phone_number" type="number"
+                            <input class="form-control" id="phone_number" name="regphone_number" type="number"
                                    placeholder="Mobil nömrə" maxlength="7">
 
 
                         </div>
 
+                        <?php if(form_error('regphone_number')){ ?>
+                            <div style="text-align: center">
+                                <p style="color:#E57C67">Nömrəni boş buraxmayın.</p>
+                            </div>
+                     <?php   }
+                        ?>
+                        <?php 
+                        if (isset($_SESSION['invalidphonenumber'])) { ?>
+                            <div style="text-align: center">
+                                <p style="color:#E57C67"><?= $_SESSION['invalidphonenumber'] ?></p>
+                            </div>
+                      <?php unset($_SESSION['invalidphonenumber']);  }
+                         ?>
 
                         <div class="input-group araMesafesi">
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-envelope"></span>
                             </div>
-                            <input class="form-control" id="email" name="email" type="email"
+                            <input class="form-control" id="email" name="regemail" type="email"
                                    placeholder="E-poçt ünvanı">
                         </div>
+
+                        <?php if(form_error('regemail')){ ?>
+                            <div style="text-align: center">
+                                <p style="color:#E57C67">E-mail-i boş buraxmayın.</p>
+                            </div>
+                     <?php   }
+                        ?>
+
+                        <?php 
+                        if (isset($_SESSION['invalidemail'])) { ?>
+                        <div style="text-align: center">
+                                <p style="color:#E57C67"><?= $_SESSION['invalidemail']; ?></p>
+                            </div>
+                           
+                      <?php unset($_SESSION['invalidemail']); }
+                         ?>
 
 
                         <div class="input-group araMesafesi">
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-lock"></span>
                             </div>
-                            <input class="form-control" id="birthday" name="birthday" type="date"
+                            <input class="form-control" id="birthday" name="regbirthday" type="date"
                                    placeholder="Doğum tarixi">
                         </div>
-                        <button type="button" class="btn btn-secondary btn1">Yadda saxla</button>
+
+                        <?php if(form_error('regbirthday')){ ?>
+                            <div style="text-align: center">
+                                <p style="color:#E57C67">Doğum tarixini boş buraxmayın.</p>
+                            </div>
+                     <?php   }
+                        ?>
+
+                        <?php 
+                        if (isset($_SESSION['invalidbdate'])) { ?>
+                        <div style="text-align: center">
+                                <p style="color:#E57C67"><?= $_SESSION['invalidbdate']; ?></p>
+                            </div>
+                           
+                      <?php unset($_SESSION['invalidbdate']); }
+                         ?>
+
+
+                         
+                </div>
+
+
+                    <!-- <div class="row"> -->
+
+
+                        <div class="col-md-12"></div>
+                        <div class="col-md-12">
+
+
+                             <button type="submit" class="btn btn-secondary btn1" style="width: 100%">Yadda saxla</button>
+                        </div>
+                        <div class="col-md-12"></div>
+
+
+                    <!-- </div> -->
+
+                      
+                        <!-- <button type="submit" class="btn btn-secondary btn1">Yadda saxla</button> -->
 
                     </form>
 
@@ -238,6 +365,7 @@
 
     </div>
 </div>
+
 </div>
 </div>
 

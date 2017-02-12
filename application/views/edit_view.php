@@ -64,7 +64,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="navbarli3">
                             <center>  <span class="navbarli3icon glyphicon glyphicon-user">
-				         	<a href="<?= base_url(); ?>home/">Cixis</a>
+				         	<a href="<?= base_url(); ?>auth/logout">Cixis</a>
 				        </span></center>
                         </li>
                     </ul>
@@ -86,9 +86,6 @@
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text" name="surname" placeholder="Soyad"><br>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="unvan" placeholder="Ünvan"><br>
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text" name="unvan" placeholder="Ünvan"><br>

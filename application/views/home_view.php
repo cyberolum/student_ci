@@ -17,7 +17,7 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/magic-check.css">-->
 <!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/styleKM.css">-->
-<!--    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/style/styleGunk.css">-->
 <!---->
 <!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/responsivGk.css">-->
@@ -72,13 +72,47 @@
                         </li>
 
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="navbarli3">
-                            <center>  <span class="navbarli3icon glyphicon glyphicon-user">
-                  <a href="<?= base_url(); ?>auth/login">Giriş / Qeydiyyat</a>
+
+
+                    <?php if (isset($_SESSION['logout'])) { ?>
+                         <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <center>  <span class=" glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>auth/logout">Çıxış</a>
                 </span></center>
                         </li>
                     </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <center>  <span class=" glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>profil/">Profilim</a>
+                </span></center>
+                        </li>
+                    </ul>
+                 <?php   }
+                 else{ ?>
+
+
+
+                 
+<ul class="nav navbar-nav navbar-right">
+                        <li class="navbarli3">
+                            <center>  <span class="navbarli3icon glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>auth/">Giriş / Qeydiyyat</a>
+                </span></center>
+                        </li>
+                    </ul>
+                <?php }
+
+                     ?>
+
+                   
+
+
+                    
+
+
                 </div>
             </div>
         </nav>
@@ -237,8 +271,8 @@
                 </div>
                 <div class="col-md-4">
 
-                    <h2 class="ButunElanlar">Hamısını göstər</h2>
-                    <span class="border"></span>
+<!--                    <h2 class="ButunElanlar">Hamısını göstər</h2>-->
+<!--                    <span class="border"></span>-->
                 </div>
                 <div class="col-md-6 col-xs-6 text-right" style="margin-top:30px;float: right;">
                 </div>
@@ -248,26 +282,24 @@
     <div class="container">
         <div class="row">
             <section class="regular slider">
-
+                <?php foreach ($mainAds as $ads) {?>
                 <div class="col-md-4  UmumiElan" style="border-left:3px solid #E7DFDD">
                     <div class="col-md-12 ">
                         <img class="ElanSekil" src="<?= base_url(); ?>uploads/ev1.jpg" alt="">
                     </div>
                     <div class="col-md-12 ">
-                        <h3 class="h33">Yerleşdiyi yer</h3>
+                        <h3 class="h33"><?= $ads['ads_address'] ?></h3>
                     </div>
                     <div class="col-md-12 ">
                         <a><i class="fa fa-map-marker Unvan" aria-hidden="true"></i></a>
-                        <h4 class="UnvaniHaqqindaMelumat">28 May</h4>
+                        <h4 class="UnvaniHaqqindaMelumat"><?= $ads['mark'] ?></h4>
                     </div>
                     <div class="col-md-12 " style="background: lavender; top:40px; height: 80px; ">
                         <div class="col-md-12 " style="top:20px;">
-                            <h6 class="Sahesi" style="margin:0;padding: 0; ">Sahə</h6>
                             <h6 class="OtaqSayi" style="margin:0;padding: 0;margin-left: 65px;">Otaq sayı</h6>
                         </div>
                         <div class="col-md-12 " style="top:30px;">
-                            <h6 class="Sahesi" style="margin:0;padding: 0; ">160</h6>
-                            <h6 class="OtaqSayi" style="margin:0;padding: 0; margin-left: 95px; ">3</h6>
+                            <h6 class="OtaqSayi" style="margin:0;padding: 0; margin-left: 95px; "><?= $ads['room'] ?></h6>
                         </div>
 
                     </div>
@@ -275,190 +307,14 @@
                         <div class="col-md-12" style="margin-top:30px; margin-left:-30px">
                             <div class="col-md-8">
                                 <a><i class="fa fa-user Sahibkar" aria-hidden="true"></i></a>
-                                <h4 class="AdSoyad">name</h4>
-                            </div>
-                            <div class="col-md-4">
-                                <h4 class="Tarix">11.12.16</h4>
+                                <h4 class="AdSoyad"><?= $ads['ads_user_name'] ?></h4>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <div class="col-md-4  UmumiElan" style="border-left:3px solid #E7DFDD">
-                    <div class="col-md-12 ">
-                        <img class="ElanSekil" src="<?= base_url(); ?>uploads/ev3.jpg" alt="">
-                    </div>
-                    <div class="col-md-12 ">
-                        <h3 class="h33">Yerleşdiyi yer</h3>
-                    </div>
-                    <div class="col-md-12 ">
-                        <a><i class="fa fa-map-marker Unvan" aria-hidden="true"></i></a>
-                        <h4 class="UnvaniHaqqindaMelumat">28 May</h4>
-                    </div>
-                    <div class="col-md-12 " style="background: lavender; top:40px; height: 80px; ">
-                        <div class="col-md-12 " style="top:20px;">
-                            <h6 class="Sahesi" style="margin:0;padding: 0; ">Sahe</h6>
-                            <h6 class="OtaqSayi" style="margin:0;padding: 0;margin-left: 65px;">Otaq sayı</h6>
-                        </div>
-                        <div class="col-md-12 " style="top:30px;">
-                            <h6 class="Sahesi" style="margin:0;padding: 0; ">160</h6>
-                            <h6 class="OtaqSayi" style="margin:0;padding: 0; margin-left: 95px; ">3</h6>
-                        </div>
+                <?php } ?>
 
-                    </div>
-                    <div class="col-md-12" style="top:40px; height:100px;">
-                        <div class="col-md-12" style="margin-top:30px; margin-left:-30px">
-                            <div class="col-md-8">
-                                <a><i class="fa fa-user Sahibkar" aria-hidden="true"></i></a>
-                                <h4 class="AdSoyad">name</h4>
-                            </div>
-                            <div class="col-md-4">
-                                <h4 class="Tarix">11.12.16</h4>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md-4  UmumiElan" style="border-left:3px solid #E7DFDD">
-                    <div class="col-md-12 ">
-                        <img class="ElanSekil" src="<?= base_url(); ?>uploads/ev5.jpg" alt="">
-                    </div>
-                    <div class="col-md-12 ">
-                        <h3 class="h33">Yerleşdiyi yer</h3>
-                    </div>
-                    <div class="col-md-12 ">
-                        <a><i class="fa fa-map-marker Unvan" aria-hidden="true"></i></a>
-                        <h4 class="UnvaniHaqqindaMelumat">28 May</h4>
-                    </div>
-                    <div class="col-md-12 " style="background: lavender; top:40px; height: 80px; ">
-                        <div class="col-md-12 " style="top:20px;">
-                            <h6 class="Sahesi" style="margin:0;padding: 0; ">Sahe</h6>
-                            <h6 class="OtaqSayi" style="margin:0;padding: 0;margin-left: 65px;">Otaq sayı</h6>
-                        </div>
-                        <div class="col-md-12 " style="top:30px;">
-                            <h6 class="Sahesi" style="margin:0;padding: 0; ">160</h6>
-                            <h6 class="OtaqSayi" style="margin:0;padding: 0; margin-left: 95px; ">3</h6>
-                        </div>
-
-                    </div>
-                    <div class="col-md-12" style="top:40px; height:100px;">
-                        <div class="col-md-12" style="margin-top:30px; margin-left:-30px">
-                            <div class="col-md-8">
-                                <a><i class="fa fa-user Sahibkar" aria-hidden="true"></i></a>
-                                <h4 class="AdSoyad">name</h4>
-                            </div>
-                            <div class="col-md-4">
-                                <h4 class="Tarix">11.12.16</h4>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md-4  UmumiElan" style="border-left:3px solid #E7DFDD">
-                    <div class="col-md-12 ">
-                        <img class="ElanSekil" src="<?= base_url(); ?>uploads/ev1.jpg" alt="">
-                    </div>
-                    <div class="col-md-12 ">
-                        <h3 class="h33">Yerleşdiyi yer</h3>
-                    </div>
-                    <div class="col-md-12 ">
-                        <a><i class="fa fa-map-marker Unvan" aria-hidden="true"></i></a>
-                        <h4 class="UnvaniHaqqindaMelumat">28 May</h4>
-                    </div>
-                    <div class="col-md-12 " style="background: lavender; top:40px; height: 80px; ">
-                        <div class="col-md-12 " style="top:20px;">
-                            <h6 class="Sahesi" style="margin:0;padding: 0; ">Sahe</h6>
-                            <h6 class="OtaqSayi" style="margin:0;padding: 0;margin-left: 65px;">Otaq sayı</h6>
-                        </div>
-                        <div class="col-md-12 " style="top:30px;">
-                            <h6 class="Sahesi" style="margin:0;padding: 0; ">160</h6>
-                            <h6 class="OtaqSayi" style="margin:0;padding: 0; margin-left: 95px; ">3</h6>
-                        </div>
-
-                    </div>
-                    <div class="col-md-12" style="top:40px; height:100px;">
-                        <div class="col-md-12" style="margin-top:30px; margin-left:-30px">
-                            <div class="col-md-8">
-                                <a><i class="fa fa-user Sahibkar" aria-hidden="true"></i></a>
-                                <h4 class="AdSoyad">name</h4>
-                            </div>
-                            <div class="col-md-4">
-                                <h4 class="Tarix">11.12.16</h4>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md-4  UmumiElan" style="border-left:3px solid #E7DFDD">
-                    <div class="col-md-12 ">
-                        <img class="ElanSekil" src="<?= base_url(); ?>uploads/ev3.jpg" alt="">
-                    </div>
-                    <div class="col-md-12 ">
-                        <h3 class="h33">Yerleşdiyi yer</h3>
-                    </div>
-                    <div class="col-md-12 ">
-                        <a><i class="fa fa-map-marker Unvan" aria-hidden="true"></i></a>
-                        <h4 class="UnvaniHaqqindaMelumat">28 May</h4>
-                    </div>
-                    <div class="col-md-12 " style="background: lavender; top:40px; height: 80px; ">
-                        <div class="col-md-12 " style="top:20px;">
-                            <h6 class="Sahesi" style="margin:0;padding: 0; ">Sahe</h6>
-                            <h6 class="OtaqSayi" style="margin:0;padding: 0;margin-left: 65px;">Otaq sayı</h6>
-                        </div>
-                        <div class="col-md-12 " style="top:30px;">
-                            <h6 class="Sahesi" style="margin:0;padding: 0; ">160</h6>
-                            <h6 class="OtaqSayi" style="margin:0;padding: 0; margin-left: 95px; ">3</h6>
-                        </div>
-
-                    </div>
-                    <div class="col-md-12" style="top:40px; height:100px;">
-                        <div class="col-md-12" style="margin-top:30px; margin-left:-30px">
-                            <div class="col-md-8">
-                                <a><i class="fa fa-user Sahibkar" aria-hidden="true"></i></a>
-                                <h4 class="AdSoyad">name</h4>
-                            </div>
-                            <div class="col-md-4">
-                                <h4 class="Tarix">11.12.16</h4>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md-4  UmumiElan" style="border-left:3px solid #E7DFDD">
-                    <div class="col-md-12 ">
-                        <img class="ElanSekil" src="<?= base_url(); ?>uploads/ev5.jpg" alt="">
-                    </div>
-                    <div class="col-md-12 ">
-                        <h3 class="h33">Yerleşdiyi yer</h3>
-                    </div>
-                    <div class="col-md-12 ">
-                        <a><i class="fa fa-map-marker Unvan" aria-hidden="true"></i></a>
-                        <h4 class="UnvaniHaqqindaMelumat">28 May</h4>
-                    </div>
-                    <div class="col-md-12 " style="background: lavender; top:40px; height: 80px; ">
-                        <div class="col-md-12 style=" top:20px;
-                        "">
-                        <h6 class="Sahesi" style="margin:0;padding: 0; ">Sahe</h6>
-                        <h6 class="OtaqSayi" style="margin:0;padding: 0;margin-left: 65px;">Otaq sayı</h6>
-                    </div>
-                    <div class="col-md-12 " style="top:30px;">
-                        <h6 class="Sahesi" style="margin:0;padding: 0; ">160</h6>
-                        <h6 class="OtaqSayi" style="margin:0;padding: 0; margin-left: 95px; ">3</h6>
-                    </div>
-
-                </div>
-                <div class="col-md-12" style="top:40px; height:100px;">
-                    <div class="col-md-12" style="margin-top:30px; margin-left:-30px">
-                        <div class="col-md-8">
-                            <a><i class="fa fa-user Sahibkar" aria-hidden="true"></i></a>
-                            <h4 class="AdSoyad">name</h4>
-                        </div>
-                        <div class="col-md-4">
-                            <h4 class="Tarix">11.12.16</h4>
-                        </div>
-                    </div>
-
-                </div>
         </div>
 
 
@@ -469,7 +325,7 @@
 
 </section>
 
-<div class="emp"></div>
+<div class="emp" style="margin-bottom: 100px;"></div>
 
 
 <div class="container-fluid">
