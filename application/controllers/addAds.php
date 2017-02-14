@@ -85,9 +85,11 @@ class addAds extends CI_Controller
         $viewData['city_list'] = $this->db->get('city')->result();
         $viewData['hometype_list'] = $this->db->get('home_types')->result_array();
         $viewData['rooms_list'] = $this->db->get('rooms')->result_array();
+
 //        $viewData['user_name'] = $this->db->get_where('usersdb', array('id' => $user_id))->result_array();
 //        $viewData['user_phone'] = $this->db->get_where('usersdb', array('id' => $user_id))->result_array();
 //        $viewData['user_email'] = $this->db->get_where('usersdb', array('id' => $user_id))->result_array();
+
         $this->load->view('ads_view', $viewData);
     }
 

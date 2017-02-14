@@ -31,14 +31,16 @@ class modelAdmin extends CI_model
     public function select()
     {
         $sql = "SELECT
-                  ads.id,ads.ads_address,ads.ads_user_name,ads.ads_user_email,ads.status,ads_user_phone,rom.rooms_count AS room,mrk.mark_name AS mark
+                  ads.id,ads.ads_address,city.city_name,ads.ads_price,ads.ads_user_name,ads.ads_user_email,ads.status,ads_user_phone,rom.rooms_count AS room,mrk.mark_name AS mark
                 FROM
                   `ads`
                 LEFT JOIN mark mrk ON mrk.id = ads.mark_id
                 INNER JOIN rooms rom ON rom.id = ads.rooms_id
+                INNER JOIN city ON city.id = ads.city_id
                 WHERE
-                 ads.userdb_id= '3'";
+                 ads.userdb_id= '3' order by ads.id DESC";
         $result = $this->db->query($sql);
+
         return $result->result_array();
     }
 

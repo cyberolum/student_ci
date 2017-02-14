@@ -90,28 +90,6 @@ $user  = $_SESSION['user'][0];
                         </li>
 
                     </ul>
-<<<<<<< HEAD
-
-                    <?php if (isset($_SESSION['logout'])) { ?>
-                         <ul class="nav navbar-nav navbar-right">
-                        <li class="">
-                            <center>  <span class=" glyphicon glyphicon-user">
-                  <a href="<?= base_url(); ?>auth/logout">Çıxış</a>
-                </span></center>
-                        </li>
-                    </ul>
-
-                 <?php   } else{ ?>
-
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="navbarli3">
-                            <center>  <span class="navbarli3icon glyphicon glyphicon-user">
-                  <a href="<?= base_url(); ?>auth/index">Giriş / Qeydiyyat</a>
-                </span></center>
-                        </li>
-                    </ul>
-=======
                     <?php if (isset($_SESSION['logout'])) { ?>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="">
@@ -136,7 +114,6 @@ $user  = $_SESSION['user'][0];
                 </span></center>
                             </li>
                         </ul>
->>>>>>> 5a7a2ce7d01ca07cf6ea8c3c588017ba2746e4ef
                     <?php } ?>
                 </div>
             </div>
@@ -161,7 +138,7 @@ $user  = $_SESSION['user'][0];
                                 ?>
                                 <label for="category" style="color: red;">* Əmlakın növü</label>
                             <?php }else { ?>
-                            <label for="category"> Əmlakın növü</label>
+                                <label for="category"> Əmlakın növü</label>
                             <?php } ?>
                         </div>
                         <div class="col-md-7">
@@ -283,7 +260,7 @@ $user  = $_SESSION['user'][0];
                         </div>
                         <div class="col-md-7">
                             <textarea class="form-control textarea" rows="5" cols="15" id="comment"
-                                  style="margin-bottom: 10px;" name="comment"></textarea>
+                                      style="margin-bottom: 10px;" name="comment"></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -328,32 +305,22 @@ $user  = $_SESSION['user'][0];
                             <input type="text" class="form-control" id="usr" name="email" value="">
                         </div>
                     </div>
-                    
-
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="">Shekil</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="">Şəkil</label>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="file" name="photo" id="file-4" class="inputfile inputfile-3"
+                                   data-multiple-caption="{count} şəkil seçilmişdir" multiple/>
+                            <label for="file-4"><span>Şəkil seç&hellip;</span></label>
+                        </div>
                     </div>
-
-
-                    <div class="col-md-7">
-                       <!--  <input type="file" name="photo" id="file-4" class="inputfile inputfile-3"
-                               data-multiple-caption="{count} şəkil seçilmişdir" multiple/>
-                        <label for="file-4"><span>Şəkil seç&hellip;</span></label> -->
-                        <input type="file" name="photo[]" multiple>
-
-                        
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" name="button" class="btn btn-lg btn-block elaveEtNew">Əlavə et
+                            </button>
+                        </div>
                     </div>
-
-
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <button type="submit" name="button" class="btn btn-lg btn-block elaveEtNew">Əlavə et</button>
-
-                    </div>
-                </div>
                 </form>
             </div>
 
