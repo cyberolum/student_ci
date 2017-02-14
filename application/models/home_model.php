@@ -10,7 +10,7 @@ class home_model extends CI_Model
                   `ads`
                 LEFT JOIN mark mrk ON mrk.id = ads.mark_id
                 INNER JOIN rooms rom ON rom.id = ads.rooms_id
-                ";
+                WHERE status = 1";
         $result = $this->db->query($sql);
         return $result->result_array();
     }
