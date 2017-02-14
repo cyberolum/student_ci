@@ -4,7 +4,7 @@ if (isset($_SESSION['logout']) == FALSE) {
     redirect(base_url());
 }
 
-$user  = $_SESSION['user'][0];
+//$user  = $_SESSION['user'][0];
 
 ?>
 

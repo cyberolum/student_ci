@@ -37,12 +37,12 @@ class modelAdmin extends CI_model
                 LEFT JOIN mark mrk ON mrk.id = ads.mark_id
                 INNER JOIN rooms rom ON rom.id = ads.rooms_id
                 INNER JOIN city ON city.id = ads.city_id
-                WHERE
-                 ads.userdb_id= '3' order by ads.id DESC";
+                 order by ads.id DESC";
         $result = $this->db->query($sql);
 
         return $result->result_array();
     }
+
 
 
 }
