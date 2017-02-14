@@ -44,7 +44,7 @@ class ads_model extends CI_Model
         $this->db->select('*');
         $this->db->where('id', $id);
         $result = $this->db->get('ads');
-        return $result->result();
+        return $result->result_array();
     }
 
     public function update($id, $viewData)

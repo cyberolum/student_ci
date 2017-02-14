@@ -190,102 +190,55 @@ if (isset($_SESSION['yalniw']) == FALSE) {
     <div id="content">
         <section>
 
-            <!--            <div>-->
-            <!--                <h2>Bütün elanlar</h2>-->
-            <!---->
-            <!--                <table class="table">-->
-            <!--                    <thead>-->
-            <!--                    <tr>-->
-            <!--                        <th>Status</th>-->
-            <!--                        <th>Title</th>-->
-            <!--                        <th>etraflı</th>-->
-            <!--                        <th>yerləşmə</th>-->
-            <!--                        <th>Ad</th>-->
-            <!--                        <th>Telefon</th>-->
-            <!--                        <th>Email</th>-->
-            <!--                        <th>Şəkil</th>-->
-            <!--                        <th>Org</th>-->
-            <!--                        <th>Növü</th>-->
-            <!--                    </tr>-->
-            <!--                    </thead>-->
-            <!--                    <tbody>-->
-            <!--                    <tr>-->
-            <!--                        if($elan==0){'<td class="btn btn-success">Aktivləşdir</td>'}-->
-            <!--                        else-->
-            <!--                        {'<td class="btn btn-warning">Deaktivləşdir</td>'}-->
-            <!---->
-            <!--                        <td>Doe</td>-->
-            <!--                        <td>john@example.com</td>-->
-            <!--                        <td>John</td>-->
-            <!--                        <td>Doe</td>-->
-            <!--                        <td>john@example.com</td>-->
-            <!--                        <td>John</td>-->
-            <!--                        <td>Doe</td>-->
-            <!--                        <td>john@example.com</td>-->
-            <!--                        <td>John</td>-->
-            <!---->
-            <!--                    </tr>-->
-            <!--                    <tr>-->
-            <!--                        <td>Mary</td>-->
-            <!--                        <td>Moe</td>-->
-            <!--                        <td>mary@example.com</td>-->
-            <!--                        <td>Mary</td>-->
-            <!--                        <td>Moe</td>-->
-            <!--                        <td>mary@example.com</td>-->
-            <!--                        <td>Mary</td>-->
-            <!--                        <td>Moe</td>-->
-            <!--                        <td>mary@example.com</td>-->
-            <!--                        <td>Mary</td>-->
-            <!---->
-            <!--                    </tr>-->
-            <!--                    <tr>-->
-            <!--                        <td>July</td>-->
-            <!--                        <td>Dooley</td>-->
-            <!--                        <td>july@example.com</td>-->
-            <!--                        <td>July</td>-->
-            <!--                        <td>Dooley</td>-->
-            <!--                        <td>july@example.com</td>-->
-            <!--                        <td>July</td>-->
-            <!--                        <td>Dooley</td>-->
-            <!--                        <td>july@example.com</td>-->
-            <!--                        <td>July</td>-->
-            <!---->
-            <!--                    </tr>-->
-            <!---->
-            <!--            </div>-->
-
-
             <div class="container">
                 <h2>Bütün elanlar</h2>
-
-                <table class="table table-bordered">
+<table class="table table-bordered">
                     <thead>
                     <tr>
                         <th style="text-align: center">Status</th>
-                        <th style="text-align: center">Elan başlığı</th>
-                        <th style="text-align: center">Email</th>
+                        <th style="text-align: center">ID</th>
                         <th style="text-align: center">Şəhər</th>
+                        <th style="text-align: center">Ünvan</th>
+                        <th style="text-align: center">Metro</th>
+                        <th style="text-align: center">Qiymət</th>
                         <th style="text-align: center">Ad</th>
                         <th style="text-align: center">Telefon</th>
+                        <th style="text-align: center">Email</th>
                         <th style="text-align: center">Status</th>
-
-
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <?php foreach ($list as $value) { ?>
+                    <thead>
+                    <tr>
+
+
+                    </tr>
+                    </thead>
                             <td style="text-align: center">
-                                <div class="btn btn-success">Aktivləşdir</div>
-                                <div class="btn btn-warning">Deaktivləşdir</div>
+                                <?php if($value['status'] == 0){ ?>
+                                    <a class="btn btn-success" href="<?= base_url(); ?>adminController/active/<?=$value['id']?>">Aktivləşdir</a>
+                                <?php }else{?>
+                                    <a class="btn btn-warning" href="<?= base_url(); ?>adminController/active/<?=$value['id']?>">Deaktivləşdir</a>
+                                <?php }?>
+
                             </td>
+
+                            <td style="text-align: center"><?= $value['id'] ?></td>
+                            <td style="text-align: center"><?= $value['city_name'] ?></td>
                             <td style="text-align: center"><?= $value['ads_address'] ?></td>
-                            <td style="text-align: center"><?= $value['ads_user_email'] ?></td>
                             <td style="text-align: center"><?= $value['mark'] ?></td>
+                            <td style="text-align: center"><?= $value['ads_price'] ?></td>
                             <td style="text-align: center"><?= $value['ads_user_name'] ?></td>
                             <td style="text-align: center"><?= $value['ads_user_phone'] ?></td>
+                            <td style="text-align: center"><?= $value['ads_user_email'] ?></td>
                             <td style="text-align: center"><?= $value['status'] ?></td>
+   
+<!--                    <td style="text-align: center">--><?//= $value['ads_photo'] ?><!--</td>-->
+
                         <?php } ?>
+
 
                     </tr>
                     </tbody>

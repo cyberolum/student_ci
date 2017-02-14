@@ -65,10 +65,20 @@
         }
 
         public function active($id){
+            if (ctype_digit($id)){
+                $this->load->model('ads_model');
+                $ads = $this->ads_model->findByIdData($id);
+                if ($ads[0]['status'] == 0){
+                    $ads[0]['status'] = 1;
+                }else{
+                    $ads[0]['status'] = 0;
+                }
+                $this->ads_model->update($id,$ads[0]);
+                redirect(base_url('getadmindashboard'));
+            }else{
+                echo 'no';// Error sehifesi yaradin ve ora yonlendirin :)
+            }
 
-        }
-
-        public function deactive($id){
 
         }
 
