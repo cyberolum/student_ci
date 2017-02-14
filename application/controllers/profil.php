@@ -9,7 +9,7 @@ class profil extends CI_Controller
     }
 
     public function index(){
-        $viewData['showAds'] = $this->ads_model->select(3);
+        $viewData['showAds'] = $this->ads_model->select($_SESSION['user']->user_email);
         $this->load->view('profil_view', $viewData);
     }
 
