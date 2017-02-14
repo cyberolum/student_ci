@@ -107,7 +107,7 @@ $user  = $_SESSION['user'][0];
             <div class="col-md-8">
                 <div class="col-md-12 redakte">
 
-                    <a href="<?= base_url(); ?>editprofil/" class="redakteIcon"><i class="fa fa-pencil-square-o"
+                    <a href="<?= base_url(); ?>profil/edit" class="redakteIcon"><i class="fa fa-pencil-square-o"
                                                                                     aria-hidden="true"> Profil düzənlə</i>
                     </a>
                 </div>

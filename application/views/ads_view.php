@@ -1,3 +1,13 @@
+<?php
+
+if (isset($_SESSION['logout']) == FALSE) {
+    redirect(base_url());
+}
+
+$user  = $_SESSION['user'][0];
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,6 +89,19 @@
                         </li>
 
                     </ul>
+
+                    <?php if (isset($_SESSION['logout'])) { ?>
+                         <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <center>  <span class=" glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>auth/logout">Çıxış</a>
+                </span></center>
+                        </li>
+                    </ul>
+
+                 <?php   } else{ ?>
+
+
                     <ul class="nav navbar-nav navbar-right">
                         <li class="navbarli3">
                             <center>  <span class="navbarli3icon glyphicon glyphicon-user">
@@ -86,6 +109,7 @@
                 </span></center>
                         </li>
                     </ul>
+                    <?php } ?>
                 </div>
             </div>
         </nav>
@@ -354,11 +378,18 @@
                     <div class="col-md-4">
                         <label for="">Shekil</label>
                     </div>
+
+
                     <div class="col-md-7">
-                        <input type="file" name="photo" id="file-4" class="inputfile inputfile-3"
+                       <!--  <input type="file" name="photo" id="file-4" class="inputfile inputfile-3"
                                data-multiple-caption="{count} şəkil seçilmişdir" multiple/>
-                        <label for="file-4"><span>Şəkil seç&hellip;</span></label>
+                        <label for="file-4"><span>Şəkil seç&hellip;</span></label> -->
+                        <input type="file" name="photo[]" multiple>
+
+                        
                     </div>
+
+
                 </div>
                 <div class="row">
                     <div class="col-md-12">

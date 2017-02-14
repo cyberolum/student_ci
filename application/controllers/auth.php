@@ -64,6 +64,7 @@ class auth extends CI_Controller
 			$email = $this->input->post('regemail');
 			$bdate = $this->input->post('regbirthday');
 
+
             if (strlen($password) >= 6) {
 
                 if ($bdate < strtotime('2017-12-31')) {
