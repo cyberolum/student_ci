@@ -6,16 +6,19 @@ class profil extends CI_Controller
     {
         parent::__construct();
         $this->load->model('ads_model');
+        $this->load->model('profil_model' , 'pm', TRUE);
     }
 
     public function index(){
-        $viewData['showAds'] = $this->ads_model->select(3);
+        $viewData['showAds'] = $this->ads_model->select($_SESSION['user']->user_email);
         $this->load->view('profil_view', $viewData);
     }
 
     public function edit(){
         $this->load->view('edit_view');
     }
+
+
 
 
 }

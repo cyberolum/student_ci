@@ -20,18 +20,18 @@ class addAds extends CI_Controller
                 'rules'   => 'required',
                 'errors'  => 'require '
             ),
-            array(
-                'field'   => 'townlist',
-                'label'   => 'townlist',
-                'rules'   => 'required',
-                'errors'  => 'require '
-            ),
-            array(
-                'field'   => 'metrolist',
-                'label'   => 'metrolist',
-                'rules'   => 'required',
-                'errors'  => 'require '
-            ),
+//            array(
+//                'field'   => 'townlist',
+//                'label'   => 'townlist',
+//                'rules'   => 'required',
+//                'errors'  => 'require '
+//            ),
+//            array(
+//                'field'   => 'metrolist',
+//                'label'   => 'metrolist',
+//                'rules'   => 'required',
+//                'errors'  => 'require '
+//            ),
             array(
                 'field'   => 'price',
                 'label'   => 'price',
@@ -85,9 +85,11 @@ class addAds extends CI_Controller
         $viewData['city_list'] = $this->db->get('city')->result();
         $viewData['hometype_list'] = $this->db->get('home_types')->result_array();
         $viewData['rooms_list'] = $this->db->get('rooms')->result_array();
-//        $viewData['user_name'] = $this->db->get('usersdb')->result_array();
-//        $viewData['user_phone'] = $this->db->get('usersdb')->result_array();
-//        $viewData['user_email'] = $this->db->get('usersdb')->result_array();
+
+//        $viewData['user_name'] = $this->db->get_where('usersdb', array('id' => $user_id))->result_array();
+//        $viewData['user_phone'] = $this->db->get_where('usersdb', array('id' => $user_id))->result_array();
+//        $viewData['user_email'] = $this->db->get_where('usersdb', array('id' => $user_id))->result_array();
+
         $this->load->view('ads_view', $viewData);
     }
 
@@ -124,8 +126,49 @@ class addAds extends CI_Controller
         $adsuseremail = $this->input->post('email');
 
         if($this->form_validation->run() != FALSE){
+
+            $number_of_files = count($_FILES['photo']['name']);
+        $files = $_FILES;
+        for ($i=0; $i < $number_of_files  ; $i++) { 
+
+            $_FILES['photo']['name'] = $files['photo']['name'][$i];
+            $_FILES['photo']['type'] = $files['photo']['type'][$i];
+            $_FILES['photo']['tmp_name'] = $files['photo']['tmp_name'][$i];
+            $_FILES['photo']['error'] = $files['photo']['error'][$i];
+            $_FILES['photo']['size'] = $files['photo']['size'][$i];
+
+
+
+            $config['upload_path'] = 'uploadphoto/';
+            $config['allowed_types'] = 'gif|jpg|png';
+            $this->load->library('upload', $config);
+            if ($this->upload->do_upload('photo')) {
+
+                $photodata = array(
+                    'ads_photo' => $this->upload->data('file_name')
+
+                    );
+
+                $this->ads_model->addPhoto($photodata);
+                // print_r('<pre>');
+                // print_r($this->upload->data());
+                echo "yuklendi";
+            }
+            else
+            {
+                echo "xeta";
+            }
+
+
+
+            
+        }
+
+
+
+
             $viewData = array(
-                'userdb_id' => '3',
+                'userdb_id' => $_SESSION['user']->id,
                 'home_type_id' => $hometype,
                 'city_id' => $citylist,
                 'towns_id' => $townlist,
@@ -151,7 +194,9 @@ class addAds extends CI_Controller
             $this->load->view('ads_view', $viewData);
         }
 
+        
 
+        
 
     }
 
@@ -164,9 +209,9 @@ class addAds extends CI_Controller
         $viewData['city_list'] = $this->db->get('city')->result();
         $viewData['hometype_list'] = $this->db->get('home_types')->result_array();
         $viewData['rooms_list'] = $this->db->get('rooms')->result_array();
-        $viewData['user_name'] = $this->db->get('usersdb')->result_array();
-        $viewData['user_phone'] = $this->db->get('usersdb')->result_array();
-        $viewData['user_email'] = $this->db->get('usersdb')->result_array();
+        $viewData['ads_user_name'] = $this->db->get('ads')->result_array();
+        $viewData['ads_user_phone'] = $this->db->get('ads')->result_array();
+        $viewData['ads_user_email'] = $this->db->get('ads')->result_array();
         $viewData['list'] = $list = $this->ads_model->findByIdData($id);
         foreach ($list as $model)
             $viewData['list'] = $model;
@@ -188,7 +233,7 @@ class addAds extends CI_Controller
         $adsuseremail = $this->input->post('email');
 
         $viewData = array(
-            'userdb_id' => '3',
+            'userdb_id' => $_SESSION['user']->id,
             'home_type_id' => $hometype,
             'city_id' => $citylist,
             'towns_id' => $townlist,

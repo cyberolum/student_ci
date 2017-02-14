@@ -116,7 +116,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Seher</label>
+                            <label for="">Şəhər</label>
                         </div>
                         <div class="col-md-7">
                             <select class="form-control" id="city" name="citylist">
@@ -133,7 +133,6 @@
                         </div>
                         <div class="col-md-7">
                             <select class="form-control" id="town" name="townlist" disabled='false'>
-                                <option value> Siyahidan secin</option>
                                 <option value=""></option>
                             </select>
                         </div>
@@ -144,22 +143,21 @@
                         </div>
                         <div class="col-md-7">
                             <select class="form-control" id="metro" name="metrolist" disabled=''>
-                                <option value> Siyahidan secin</option>
                                 <option value=""></option>
                             </select>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Qiymet</label>
+                            <label for="">Qiymət</label>
                         </div>
                         <div class="col-md-7">
-                            <input type="text" class="form-control" id="usr" name="price">
+                            <input type="text" class="form-control" id="usr" name="price" value="<?= $list->ads_price ?>">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Otaq sayi</label>
+                            <label for="">Otaq sayı</label>
                         </div>
                         <div class="col-md-7">
                             <select class="form-control" id="category" name="roomlist">
@@ -172,24 +170,24 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Unvan</label>
+                            <label for="">Ünvan</label>
                         </div>
                         <div class="col-md-7">
-                            <input type="text" class="form-control" id="usr" name="adress">
+                            <input type="text" class="form-control" id="usr" name="adress" value="<?= $list->ads_address ?>">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Elave melumat</label>
+                            <label for="">Əlavə məlumat</label>
                         </div>
                         <div class="col-md-7">
                         <textarea class="form-control textarea" rows="5" cols="15" id="comment"
-                                  style="margin-bottom: 10px;" name="comment"></textarea>
+                                  style="margin-bottom: 10px;" name="comment" ><?= $list->ads_about ?></textarea>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Elaqeli shexs</label>
+                            <label for="">Əlaqəli şəxs</label>
                         </div>
                         <div class="col-md-7">
 
@@ -219,7 +217,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Shekil</label>
+                            <label for="">Şəkil</label>
                         </div>
                         <div class="col-md-7">
                             <input type="file" name="photo" id="file-4" class="inputfile inputfile-3"
@@ -229,7 +227,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <button type="submit" name="button" class="btn btn-lg btn-block elaveEtNew">Əlavə et</button>
+                            <button type="submit" name="button" class="btn btn-lg btn-block elaveEtNew">Yenilə</button>
                         </div>
                     </div>
                 </form>

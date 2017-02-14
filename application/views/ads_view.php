@@ -1,3 +1,13 @@
+<?php
+
+if (isset($_SESSION['logout']) == FALSE) {
+    redirect(base_url());
+}
+
+$user  = $_SESSION['user'][0];
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,25 +25,25 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/magic-check.css">-->
-<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/styleKM.css">-->
-<!--    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">-->
-<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/style/styleGunk.css">-->
-<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/responsivGk.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/slickGk.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/slick-themeGk.css">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylemv.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylege.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylemv.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylege.css">-->
-<!--    <script type="text/javascript" src="--><?//= base_url(); ?><!--public/js/file.js"></script>-->
-<!---->
-<!---->
-<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/mainSekil.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/normalizeSekil.css"/>-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/demoSekil.css"/>-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/componentSekil.css"/>-->
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/css/magic-check.css">-->
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/css/styleKM.css">-->
+    <!--    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">-->
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/style/styleGunk.css">-->
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/css/responsivGk.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/slickGk.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/slick-themeGk.css">-->
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/stylemv.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/stylege.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/stylemv.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/stylege.css">-->
+    <!--    <script type="text/javascript" src="--><? //= base_url(); ?><!--public/js/file.js"></script>-->
+    <!---->
+    <!---->
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/css/mainSekil.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/normalizeSekil.css"/>-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/demoSekil.css"/>-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/componentSekil.css"/>-->
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/main.css">
     <title>Yeni Elan</title>
     <script>(function (e, t, n) {
@@ -55,7 +65,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= base_url(); ?>home/"><img src="<?= base_url(); ?>uploads/Home.png" alt=""></a>
+                    <a class="navbar-brand" href="<?= base_url(); ?>home/"><img src="<?= base_url(); ?>uploads/Home.png"
+                                                                                alt=""></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
@@ -79,13 +90,31 @@
                         </li>
 
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="navbarli3">
-                            <center>  <span class="navbarli3icon glyphicon glyphicon-user">
-                  <a href="<?= base_url(); ?>auth/index">Giriş / Qeydiyyat</a>
+                    <?php if (isset($_SESSION['logout'])) { ?>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <center>  <span class=" glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>auth/logout">Çıxış</a>
                 </span></center>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <center>  <span class=" glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>profil/">Profilim</a>
+                </span></center>
+                            </li>
+                        </ul>
+                    <?php } else { ?>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="navbarli3">
+                                <center>  <span class="navbarli3icon glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>auth/">Giriş / Qeydiyyat</a>
+                </span></center>
+                            </li>
+                        </ul>
+                    <?php } ?>
                 </div>
             </div>
         </nav>
@@ -124,7 +153,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <?php
-                            if (form_error('hometype')) {
+                            if (form_error('citylist')) {
                                 ?>
                                 <label for="category" style="color: red;">* Şəhər</label>
                             <?php }else { ?>
@@ -152,7 +181,6 @@
                         </div>
                         <div class="col-md-7">
                             <select class="form-control" id="town" name="townlist" disabled='false'>
-                                <option value> Siyahidan secin</option>
                                 <option value=""></option>
                             </select>
                         </div>
@@ -169,7 +197,6 @@
                         </div>
                         <div class="col-md-7">
                             <select class="form-control" id="metro" name="metrolist" disabled=''>
-                                <option value> Siyahidan secin</option>
                                 <option value=""></option>
                             </select>
                         </div>
@@ -177,7 +204,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <?php
-                            if (form_error('hometype')) {
+                            if (form_error('price')) {
                                 ?>
                                 <label for="category" style="color: red;">* Qiymət</label>
                             <?php }else { ?>
@@ -191,7 +218,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <?php
-                            if (form_error('hometype')) {
+                            if (form_error('roomlist')) {
                                 ?>
                                 <label for="category" style="color: red;">* Otaq sayı</label>
                             <?php }else { ?>
@@ -210,7 +237,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <?php
-                            if (form_error('hometype')) {
+                            if (form_error('adress')) {
                                 ?>
                                 <label for="category" style="color: red;">* Ünvan</label>
                             <?php }else { ?>
@@ -224,7 +251,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <?php
-                            if (form_error('hometype')) {
+                            if (form_error('comment')) {
                                 ?>
                                 <label for="category" style="color: red;">* Əlavə məlumat</label>
                             <?php }else { ?>
@@ -239,7 +266,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <?php
-                            if (form_error('hometype')) {
+                            if (form_error('contact')) {
                                 ?>
                                 <label for="category" style="color: red;">* Əlaqəli şəxs</label>
                             <?php }else { ?>
@@ -253,7 +280,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <?php
-                            if (form_error('hometype')) {
+                            if (form_error('contact')) {
                                 ?>
                                 <label for="category" style="color: red;">* Telefon</label>
                             <?php }else { ?>
@@ -267,7 +294,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <?php
-                            if (form_error('hometype')) {
+                            if (form_error('email')) {
                                 ?>
                                 <label for="category" style="color: red;">* Email</label>
                             <?php }else { ?>
@@ -323,34 +350,34 @@
 <script src='<?= base_url(); ?>public/js/javascript.js'></script>
 <script src='<?= base_url(); ?>public/js/jquery-3.1.1.js'></script>
 <script type="text/javascript">
-    $(document).ready(function(){
-        $('#city').on('change', function(){
-           var city_id = $(this).val();
+    $(document).ready(function () {
+        $('#city').on('change', function () {
+            var city_id = $(this).val();
             $('#town').empty();
             $('#metro').empty();
             $('#town').append("<option>Siyahidan secin</option>");
             $('#metro').append("<option>Siyahidan secin</option>");
-           if(city_id == '8'){
-               $('#town').prop('disabled', false),
-               $('#metro').prop('disabled', false);
-               $.ajax({
-                   url:'<?= base_url(); ?>addAds/get_metros',
-                   type: 'POST',
-                   data: {'city_id' : city_id},
-                   dataType: 'json',
-                   success: function(data){
-                       $('#town').html(data.town);
-                       $('#metro').html(data.metro);
-                   },
-                   error: function () {
-                       alert('Error olmadi');
-                   }
-               });
-           }
-           else{
-               $('#town').prop('disabled', true);
-               $('#metro').prop('disabled', true);
-           }
+            if (city_id == '8') {
+                $('#town').prop('disabled', false),
+                    $('#metro').prop('disabled', false);
+                $.ajax({
+                    url: '<?= base_url(); ?>addAds/get_metros',
+                    type: 'POST',
+                    data: {'city_id': city_id},
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#town').html(data.town);
+                        $('#metro').html(data.metro);
+                    },
+                    error: function () {
+                        alert('Error olmadi');
+                    }
+                });
+            }
+            else {
+                $('#town').prop('disabled', true);
+                $('#metro').prop('disabled', true);
+            }
         });
     });
 </script>

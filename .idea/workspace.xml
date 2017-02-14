@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="4fb7e1d2-ad11-49d9-93af-5e1d4b5d5222" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
@@ -13,6 +14,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/ads_view.php" afterPath="$PROJECT_DIR$/application/views/ads_view.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+=======
+>>>>>>> c1f3ee91cc4b2fa92cfdd327b45f769f1ad9468a
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,7 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+<<<<<<< HEAD
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -381,11 +385,14 @@
       <method />
     </configuration>
   </component>
+=======
+>>>>>>> c1f3ee91cc4b2fa92cfdd327b45f769f1ad9468a
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="4fb7e1d2-ad11-49d9-93af-5e1d4b5d5222" name="Default" comment="" />
       <created>1486985488481</created>
       <option name="number" value="Default" />
@@ -425,10 +432,20 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
+=======
+      <created>1486983353805</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1486983353805</updated>
+    </task>
+    <servers />
+  </component>
+>>>>>>> c1f3ee91cc4b2fa92cfdd327b45f769f1ad9468a
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
+<<<<<<< HEAD
     <breakpoint-manager>
       <option name="time" value="4" />
     </breakpoint-manager>
@@ -835,4 +852,9 @@
       </provider>
     </entry>
   </component>
+=======
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+>>>>>>> c1f3ee91cc4b2fa92cfdd327b45f769f1ad9468a
 </project>
