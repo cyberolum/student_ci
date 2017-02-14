@@ -205,11 +205,12 @@ if (isset($_SESSION['yalniw']) == FALSE) {
                         <th style="text-align: center">Telefon</th>
                         <th style="text-align: center">Email</th>
                         <th style="text-align: center">Status</th>
+                        <th style="text-align: center">Toplam = <?= COUNT($list) ?></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <?php foreach ($list as $value) { ?>
+                        <?php   foreach ($list as $value) { ?>
                     <thead>
                     <tr>
 
@@ -234,7 +235,7 @@ if (isset($_SESSION['yalniw']) == FALSE) {
                             <td style="text-align: center"><?= $value['ads_user_phone'] ?></td>
                             <td style="text-align: center"><?= $value['ads_user_email'] ?></td>
                             <td style="text-align: center"><?= $value['status'] ?></td>
-   
+
 <!--                    <td style="text-align: center">--><?//= $value['ads_photo'] ?><!--</td>-->
 
                         <?php } ?>
