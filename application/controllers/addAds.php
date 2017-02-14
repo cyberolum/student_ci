@@ -124,6 +124,47 @@ class addAds extends CI_Controller
         $adsuseremail = $this->input->post('email');
 
         if($this->form_validation->run() != FALSE){
+
+            $number_of_files = count($_FILES['photo']['name']);
+        $files = $_FILES;
+        for ($i=0; $i < $number_of_files  ; $i++) { 
+
+            $_FILES['photo']['name'] = $files['photo']['name'][$i];
+            $_FILES['photo']['type'] = $files['photo']['type'][$i];
+            $_FILES['photo']['tmp_name'] = $files['photo']['tmp_name'][$i];
+            $_FILES['photo']['error'] = $files['photo']['error'][$i];
+            $_FILES['photo']['size'] = $files['photo']['size'][$i];
+
+
+
+            $config['upload_path'] = 'uploadphoto/';
+            $config['allowed_types'] = 'gif|jpg|png';
+            $this->load->library('upload', $config);
+            if ($this->upload->do_upload('photo')) {
+
+                $photodata = array(
+                    'ads_photo' => $this->upload->data('file_name')
+
+                    );
+
+                $this->ads_model->addPhoto($photodata);
+                // print_r('<pre>');
+                // print_r($this->upload->data());
+                echo "yuklendi";
+            }
+            else
+            {
+                echo "xeta";
+            }
+
+
+
+            
+        }
+
+
+
+
             $viewData = array(
                 'userdb_id' => $_SESSION['user']->id,
                 'home_type_id' => $hometype,
@@ -151,7 +192,9 @@ class addAds extends CI_Controller
             $this->load->view('ads_view', $viewData);
         }
 
+        
 
+        
 
     }
 

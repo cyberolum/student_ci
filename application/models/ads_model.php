@@ -33,6 +33,10 @@ class ads_model extends CI_Model
         $this->db->insert('ads', $viewData);
     }
 
+    public function addphoto($viewUploadImage){
+        $this->db->insert('ads_photos', $viewUploadImage);
+    }
+
     public function delete($id)
     {
         $this->db->where('id', $id);
@@ -51,5 +55,9 @@ class ads_model extends CI_Model
     {
         $this->db->where('id', $id);
         $this->db->update('ads', $viewData);
+    }
+
+    public function addPhotoqwe($photodata){
+        $this->db->insert('ads_photos', $photodata);
     }
 }

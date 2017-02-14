@@ -6,6 +6,7 @@ class profil extends CI_Controller
     {
         parent::__construct();
         $this->load->model('ads_model');
+        $this->load->model('profil_model' , 'pm', TRUE);
     }
 
     public function index(){
@@ -16,6 +17,8 @@ class profil extends CI_Controller
     public function edit(){
         $this->load->view('edit_view');
     }
+
+
 
 
 }
