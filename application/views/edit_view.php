@@ -107,7 +107,7 @@
                     <input type="file" accept="png" class="form-control" name="profil_sekli">
                 </div>
                 <div>
-                    <button class="btn btn-info btn-lg btn-block elaveEt"><a href="" style="color:white"> Əlavə et</a>
+                    <button class="btn btn-info btn-lg btn-block elaveEt"><a href="" style="color:white"> Yenilə</a>
                     </button>
                 </div>
 

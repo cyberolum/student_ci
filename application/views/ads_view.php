@@ -25,25 +25,25 @@ $user  = $_SESSION['user'][0];
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/magic-check.css">-->
-<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/styleKM.css">-->
-<!--    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">-->
-<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/style/styleGunk.css">-->
-<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/responsivGk.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/slickGk.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/slick-themeGk.css">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylemv.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylege.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylemv.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/stylege.css">-->
-<!--    <script type="text/javascript" src="--><?//= base_url(); ?><!--public/js/file.js"></script>-->
-<!---->
-<!---->
-<!--    <link rel="stylesheet" href="--><?//= base_url(); ?><!--public/css/mainSekil.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/normalizeSekil.css"/>-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/demoSekil.css"/>-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= base_url(); ?><!--public/css/componentSekil.css"/>-->
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/css/magic-check.css">-->
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/css/styleKM.css">-->
+    <!--    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">-->
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/style/styleGunk.css">-->
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/css/responsivGk.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/slickGk.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/slick-themeGk.css">-->
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/stylemv.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/stylege.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/stylemv.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/stylege.css">-->
+    <!--    <script type="text/javascript" src="--><? //= base_url(); ?><!--public/js/file.js"></script>-->
+    <!---->
+    <!---->
+    <!--    <link rel="stylesheet" href="--><? //= base_url(); ?><!--public/css/mainSekil.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/normalizeSekil.css"/>-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/demoSekil.css"/>-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><? //= base_url(); ?><!--public/css/componentSekil.css"/>-->
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/main.css">
     <title>Yeni Elan</title>
     <script>(function (e, t, n) {
@@ -65,7 +65,8 @@ $user  = $_SESSION['user'][0];
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= base_url(); ?>home/"><img src="<?= base_url(); ?>uploads/Home.png" alt=""></a>
+                    <a class="navbar-brand" href="<?= base_url(); ?>home/"><img src="<?= base_url(); ?>uploads/Home.png"
+                                                                                alt=""></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
@@ -89,6 +90,7 @@ $user  = $_SESSION['user'][0];
                         </li>
 
                     </ul>
+<<<<<<< HEAD
 
                     <?php if (isset($_SESSION['logout'])) { ?>
                          <ul class="nav navbar-nav navbar-right">
@@ -109,6 +111,32 @@ $user  = $_SESSION['user'][0];
                 </span></center>
                         </li>
                     </ul>
+=======
+                    <?php if (isset($_SESSION['logout'])) { ?>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <center>  <span class=" glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>auth/logout">Çıxış</a>
+                </span></center>
+                            </li>
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <center>  <span class=" glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>profil/">Profilim</a>
+                </span></center>
+                            </li>
+                        </ul>
+                    <?php } else { ?>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="navbarli3">
+                                <center>  <span class="navbarli3icon glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>auth/">Giriş / Qeydiyyat</a>
+                </span></center>
+                            </li>
+                        </ul>
+>>>>>>> 5a7a2ce7d01ca07cf6ea8c3c588017ba2746e4ef
                     <?php } ?>
                 </div>
             </div>
@@ -126,253 +154,182 @@ $user  = $_SESSION['user'][0];
             <div class="col-md-8 main">
                 <form action="<?= base_url(); ?>addAds/add" method="post" enctype="multipart/form-data">
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="category">Əmlakın növü</label>
-                    </div>
-                    <div class="col-md-7">
-                        <select class="form-control" id="category" name="hometype">
-                            <option value> Siyahidan secin</option>
-                            <?php foreach ($hometype_list as $hometype){ ?>
-                                <option value="<?= $hometype['id'] ?>"><?= $hometype['home_type_name'] ?></option>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <?php
+                            if (form_error('hometype')) {
+                                ?>
+                                <label for="category" style="color: red;">* Əmlakın növü</label>
+                            <?php }else { ?>
+                            <label for="category"> Əmlakın növü</label>
                             <?php } ?>
-                        </select>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-7 col-md-offset-2 text-center">
-                            <?php
-                            if(form_error('hometype')){?>
-                                <div style="margin-bottom: 20px;">
-                                    <p style="color: red;">* Emlak novu secin!</p>
-                                </div>
-                          <?php  }
-                            ?>
-
+                        </div>
+                        <div class="col-md-7">
+                            <select class="form-control" id="category" name="hometype">
+                                <option value> Siyahidan secin</option>
+                                <?php foreach ($hometype_list as $hometype) { ?>
+                                    <option value="<?= $hometype['id'] ?>"><?= $hometype['home_type_name'] ?></option>
+                                <?php } ?>
+                            </select>
                         </div>
                     </div>
-                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="">Seher</label>
-                    </div>
-                    <div class="col-md-7">
-                        <select class="form-control" id="city" name="citylist">
-                            <option value> Siyahidan secin</option>
-                            <?php foreach ($city_list as $city){ ?>
-                            <option value="<?= $city->id ?>"><?= $city->city_name ?></option>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <?php
+                            if (form_error('citylist')) {
+                                ?>
+                                <label for="category" style="color: red;">* Şəhər</label>
+                            <?php }else { ?>
+                                <label for="category"> Şəhər</label>
                             <?php } ?>
-                        </select>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-7 col-md-offset-2 text-center">
-                            <?php
-                            if(form_error('hometype')){?>
-                                <div style="margin-bottom: 20px;">
-                                    <p style="color: red;">* Seher secin!</p>
-                                </div>
-                            <?php  }
-                            ?>
-
+                        </div>
+                        <div class="col-md-7">
+                            <select class="form-control" id="city" name="citylist">
+                                <option value> Siyahidan secin</option>
+                                <?php foreach ($city_list as $city) { ?>
+                                    <option value="<?= $city->id ?>"><?= $city->city_name ?></option>
+                                <?php } ?>
+                            </select>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="">Rayon</label>
-                    </div>
-                    <div class="col-md-7">
-                        <select class="form-control" id="town" name="townlist" disabled='false'>
-                            <option value> Siyahidan secin</option>
-                            <option value=""></option>
-                        </select>
-                    </div>
                     <div class="row">
-                        <div class="col-md-7 col-md-offset-2 text-center">
+                        <div class="col-md-4">
                             <?php
-                            if(form_error('hometype')){?>
-                                <div style="margin-bottom: 20px;">
-                                    <p style="color: red;">* Rayon secin!</p>
-                                </div>
-                            <?php  }
-                            ?>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="">Metro</label>
-                    </div>
-                    <div class="col-md-7">
-                        <select class="form-control" id="metro" name="metrolist" disabled=''>
-                            <option value> Siyahidan secin</option>
-                            <option value=""></option>
-                         </select>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-7 col-md-offset-2 text-center">
-                            <?php
-                            if(form_error('hometype')){?>
-                                <div style="margin-bottom: 20px;">
-                                    <p style="color: red;">* Metro secin!</p>
-                                </div>
-                            <?php  }
-                            ?>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="">Qiymet</label>
-                    </div>
-                    <div class="col-md-7">
-                        <input type="text" class="form-control" id="usr" name="price">
-                    </div>
-                    <div class="row">
-                        <div class="col-md-7 col-md-offset-2 text-center">
-                            <?php
-                            if(form_error('hometype')){?>
-                                <div style="margin-bottom: 20px;">
-                                    <p style="color: red;">* Qiymet daxil edin!</p>
-                                </div>
-                            <?php  }
-                            ?>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="">Otaq sayi</label>
-                    </div>
-                    <div class="col-md-7">
-                        <select class="form-control" id="category" name="roomlist">
-                            <option value> Siyahidan secin</option>
-                            <?php foreach ($rooms_list as $rooms){ ?>
-                                <option value="<?= $rooms['id'] ?>"><?= $rooms['rooms_count'] ?></option>
+                            if (form_error('hometype')) {
+                                ?>
+                                <label for="category" style="color: red;">* Rayon</label>
+                            <?php }else { ?>
+                                <label for="category"> Rayon</label>
                             <?php } ?>
-                        </select>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-7 col-md-offset-2 text-center">
-                            <?php
-                            if(form_error('hometype')){?>
-                                <div style="margin-bottom: 20px;">
-                                    <p style="color: red;">* Otaq sayi secin!</p>
-                                </div>
-                            <?php  }
-                            ?>
-
+                        </div>
+                        <div class="col-md-7">
+                            <select class="form-control" id="town" name="townlist" disabled='false'>
+                                <option value=""></option>
+                            </select>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="">Unvan</label>
-                    </div>
-                    <div class="col-md-7">
-                        <input type="text" class="form-control" id="usr" name="adress">
-                    </div>
                     <div class="row">
-                        <div class="col-md-7 col-md-offset-2 text-center">
+                        <div class="col-md-4">
                             <?php
-                            if(form_error('hometype')){?>
-                                <div style="margin-bottom: 20px;">
-                                    <p style="color: red;">* Unvan daxil edin!</p>
-                                </div>
-                            <?php  }
-                            ?>
-
+                            if (form_error('hometype')) {
+                                ?>
+                                <label for="category" style="color: red;">* Metro</label>
+                            <?php }else { ?>
+                                <label for="category"> Metro</label>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-7">
+                            <select class="form-control" id="metro" name="metrolist" disabled=''>
+                                <option value=""></option>
+                            </select>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="">Elave melumat</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <?php
+                            if (form_error('price')) {
+                                ?>
+                                <label for="category" style="color: red;">* Qiymət</label>
+                            <?php }else { ?>
+                                <label for="category"> Qiymət</label>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" id="usr" name="price">
+                        </div>
                     </div>
-                    <div class="col-md-7">
-                        <textarea class="form-control textarea" rows="5" cols="15" id="comment"
+                    <div class="row">
+                        <div class="col-md-4">
+                            <?php
+                            if (form_error('roomlist')) {
+                                ?>
+                                <label for="category" style="color: red;">* Otaq sayı</label>
+                            <?php }else { ?>
+                                <label for="category"> Otaq sayı</label>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-7">
+                            <select class="form-control" id="category" name="roomlist">
+                                <option value> Siyahidan secin</option>
+                                <?php foreach ($rooms_list as $rooms) { ?>
+                                    <option value="<?= $rooms['id'] ?>"><?= $rooms['rooms_count'] ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <?php
+                            if (form_error('adress')) {
+                                ?>
+                                <label for="category" style="color: red;">* Ünvan</label>
+                            <?php }else { ?>
+                                <label for="category"> Ünvan</label>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" id="usr" name="adress">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <?php
+                            if (form_error('comment')) {
+                                ?>
+                                <label for="category" style="color: red;">* Əlavə məlumat</label>
+                            <?php }else { ?>
+                                <label for="category"> Əlavə məlumat</label>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-7">
+                            <textarea class="form-control textarea" rows="5" cols="15" id="comment"
                                   style="margin-bottom: 10px;" name="comment"></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-7 col-md-offset-2 text-center">
-                            <?php
-                            if(form_error('hometype')){?>
-                                <div style="margin-bottom: 20px;">
-                                    <p style="color: red;">* Elave melumat daxil edin!</p>
-                                </div>
-                            <?php  }
-                            ?>
-
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="">Elaqeli shexs</label>
-                    </div>
-                    <div class="col-md-7">
-                        <?php foreach ($user_name as $username) {?>
-                        <input type="text" class="form-control" id="usr" name="contact" value="<?= $username['user_name'] ?>">
-                        <?php } ?>
-                    </div>
                     <div class="row">
-                        <div class="col-md-7 col-md-offset-2 text-center">
+                        <div class="col-md-4">
                             <?php
-                            if(form_error('hometype')){?>
-                                <div style="margin-bottom: 20px;">
-                                    <p style="color: red;">* Elaqeli shexs daxil edin!</p>
-                                </div>
-                            <?php  }
-                            ?>
-
+                            if (form_error('contact')) {
+                                ?>
+                                <label for="category" style="color: red;">* Əlaqəli şəxs</label>
+                            <?php }else { ?>
+                                <label for="category"> Əlaqəli şəxs</label>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" id="usr" name="contact" value="">
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="">Telefon</label>
-                    </div>
-                    <div class="col-md-7">
-                        <?php foreach ($user_phone as $userphone) {?>
-                        <input type="text" class="form-control" id="usr" name="phone" value="<?= $userphone['user_phone'] ?>">
-                        <?php } ?>
-                    </div>
                     <div class="row">
-                        <div class="col-md-7 col-md-offset-2 text-center">
+                        <div class="col-md-4">
                             <?php
-                            if(form_error('hometype')){?>
-                                <div style="margin-bottom: 20px;">
-                                    <p style="color: red;">* Elaqe nomresi daxil edin!</p>
-                                </div>
-                            <?php  }
-                            ?>
-
+                            if (form_error('contact')) {
+                                ?>
+                                <label for="category" style="color: red;">* Telefon</label>
+                            <?php }else { ?>
+                                <label for="category"> Telefon</label>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" id="usr" name="phone" value="">
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="">Email</label>
-                    </div>
-                    <div class="col-md-7">
-                        <?php foreach ($user_email as $useremail) {?>
-                        <input type="text" class="form-control" id="usr" name="email" value="<?= $useremail['user_email'] ?>">
-                        <?php } ?>
-                    </div>
                     <div class="row">
-                        <div class="col-md-7 col-md-offset-2 text-center">
+                        <div class="col-md-4">
                             <?php
-                            if(form_error('hometype')){?>
-                                <div style="margin-bottom: 20px;">
-                                    <p style="color: red;">* Email daxil edin!</p>
-                                </div>
-                            <?php  }
-                            ?>
-
+                            if (form_error('email')) {
+                                ?>
+                                <label for="category" style="color: red;">* Email</label>
+                            <?php }else { ?>
+                                <label for="category"> Email</label>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" id="usr" name="email" value="">
                         </div>
                     </div>
+                    
+
                 </div>
                 <div class="row">
                     <div class="col-md-4">
@@ -394,6 +351,7 @@ $user  = $_SESSION['user'][0];
                 <div class="row">
                     <div class="col-md-12">
                         <button type="submit" name="button" class="btn btn-lg btn-block elaveEtNew">Əlavə et</button>
+
                     </div>
                 </div>
                 </form>
@@ -425,34 +383,34 @@ $user  = $_SESSION['user'][0];
 <script src='<?= base_url(); ?>public/js/javascript.js'></script>
 <script src='<?= base_url(); ?>public/js/jquery-3.1.1.js'></script>
 <script type="text/javascript">
-    $(document).ready(function(){
-        $('#city').on('change', function(){
-           var city_id = $(this).val();
+    $(document).ready(function () {
+        $('#city').on('change', function () {
+            var city_id = $(this).val();
             $('#town').empty();
             $('#metro').empty();
             $('#town').append("<option>Siyahidan secin</option>");
             $('#metro').append("<option>Siyahidan secin</option>");
-           if(city_id == '8'){
-               $('#town').prop('disabled', false),
-               $('#metro').prop('disabled', false);
-               $.ajax({
-                   url:'<?= base_url(); ?>addAds/get_metros',
-                   type: 'POST',
-                   data: {'city_id' : city_id},
-                   dataType: 'json',
-                   success: function(data){
-                       $('#town').html(data.town);
-                       $('#metro').html(data.metro);
-                   },
-                   error: function () {
-                       alert('Error olmadi');
-                   }
-               });
-           }
-           else{
-               $('#town').prop('disabled', true);
-               $('#metro').prop('disabled', true);
-           }
+            if (city_id == '8') {
+                $('#town').prop('disabled', false),
+                    $('#metro').prop('disabled', false);
+                $.ajax({
+                    url: '<?= base_url(); ?>addAds/get_metros',
+                    type: 'POST',
+                    data: {'city_id': city_id},
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#town').html(data.town);
+                        $('#metro').html(data.metro);
+                    },
+                    error: function () {
+                        alert('Error olmadi');
+                    }
+                });
+            }
+            else {
+                $('#town').prop('disabled', true);
+                $('#metro').prop('disabled', true);
+            }
         });
     });
 </script>

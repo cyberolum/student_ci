@@ -4,7 +4,7 @@ if (isset($_SESSION['logout']) == FALSE) {
     redirect(base_url());
 }
 
-$user  = $_SESSION['user'][0];
+$user  = $_SESSION['user'];
 
 ?>
 
@@ -79,15 +79,15 @@ $user  = $_SESSION['user'][0];
                         <li class="navbarli3">
                             <center>  <span class="navbarli3icon glyphicon glyphicon-user">
 				         	<a href="<?= base_url(); ?>auth/logout">
-                           
+
                             Çıxış
-                                
+
                             </a>
 				        </span></center>
                         </li>
                     </ul>
 
-                    
+
                 </div>
             </div>
         </nav>
