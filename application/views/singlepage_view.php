@@ -79,7 +79,7 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="main_image">
-                        <img class="img-responsive" src="<?= base_url(); ?>uploads/1.jpg"/>
+                        <img class="img-responsive" src="<?= base_url(); ?>uploads/<?= $list['photo'] ?>"/>
                     </div>
                 </div>
             </div>
@@ -87,64 +87,38 @@
 
             <div class="click-slide-images">
                 <div class="row">
+                    <?php foreach ($photoList as $lists){ ?>
                     <div class="col-md-2 col-xs-4">
                         <div class="thumb">
                             <div class="overlay"></div>
-                            <img class="img-responsive" src="<?= base_url(); ?>uploads/1.jpg"/>
+                            <img class="img-responsive" src="<?= base_url(); ?>uploads/<?= $lists['photo'] ?>"/>
                         </div>
                     </div>
-
-                    <div class="col-md-2 col-xs-4">
-                        <div class="thumb">
-                            <div class="overlay"></div>
-                            <img class="img-responsive" src="<?= base_url(); ?>uploads/4.jpg"/>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2 col-xs-4">
-                        <div class="thumb">
-                            <div class="overlay"></div>
-                            <img class="img-responsive" src="<?= base_url(); ?>uploads/3.jpg"/>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-xs-4">
-                        <div class="thumb">
-                            <div class="overlay"></div>
-                            <img class="img-responsive" src="<?= base_url(); ?>uploads/4.jpg"/>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-xs-4">
-                        <div class="thumb">
-                            <div class="overlay"></div>
-                            <img class="img-responsive" src="<?= base_url(); ?>uploads/2.jpg"/>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-xs-4">
-                        <div class="thumb">
-                            <div class="overlay"></div>
-                            <img class="img-responsive" src="<?= base_url(); ?>uploads/1.jpg"/>
-                        </div>
-                    </div>
-                 </div>
+                    <?php } ?>
+                </div>
             </div>
 
         </div>
         <div class="col-md-4 col-sm-12 col-xs-12">
             <div class="row">
                 <div class="single-page-home-info">
-                    <div class="col-md-12 col-sm-12 col-xs-12 info1" style="background:#071522"><p><i
+                    <div class="col-md-12 col-sm-12 col-xs-12 info1" style="background:grey"><p><i
                                     class="glyphicon glyphicon-euro"></i>
                             Qiyməti</p>
-                        <span>223 AZN</span>
+                        <span><?= $list['ads_price'] ?> AZN</span>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 info2" style="background:#071522"><p><i
+                                    class="glyphicon glyphicon-user"></i>Əlaqəli şəxs</p>
+                        <span><?= $list['ads_user_name'] ?></span>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12 info2" style="background:grey"><p><i
-                                    class="glyphicon glyphicon-earphone"></i>Əlaqəli şəxs</p>
-                        <span>051-778-80-40</span>
+                                    class="glyphicon glyphicon-earphone"></i>Əlaqə</p>
+                        <span><?= $list['ads_user_phone'] ?></span>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12 info1" style="background:#071522"><p><i
                                     class="glyphicon glyphicon-map-marker"></i>
                             Ünvan</p>
-                        <span>Nizami</span>
+                        <span><?= $list['ads_address'] ?></span>
                     </div>
 
                 </div>
@@ -159,16 +133,16 @@
 
                         <div class="col-md-12 col-sm-12 col-xs-12 info2" style="background:grey"><p><i
                                         class="glyphicon glyphicon-unchecked"></i>Otaq sayı</p>
-                            <span>3</span>
+                            <span><?= $list['room'] ?></span>
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12 info1" style="background:#071522"><p><i
                                         class="glyphicon glyphicon-home"></i>
                                 Əmlak növü</p>
-                            <span>Mənzil</span>
+                            <span><?= $list['home'] ?></span>
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12 info2" style="background:grey"><p><i
-                                        class="glyphicon glyphicon-home"></i>Vəziyyəti</p>
-                            <span>Orta təmirli</span>
+                                        class="glyphicon glyphicon-home"></i>Əlavə məlumat</p>
+                            <span><?= $list['ads_about'] ?></span>
                         </div>
 
                     </div>

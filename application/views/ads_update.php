@@ -1,3 +1,13 @@
+<?php
+
+if (isset($_SESSION['logout']) == FALSE) {
+    redirect(base_url());
+}
+
+//$user  = $_SESSION['user'][0];
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,13 +89,28 @@
                         </li>
 
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="navbarli3">
-                            <center>  <span class="navbarli3icon glyphicon glyphicon-user">
-                  <a href="<?= base_url(); ?>auth/login">Giriş / Qeydiyyat</a>
+                    <?php if (isset($_SESSION['logout'])) { ?>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <center>  <span class=" glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>auth/logout">Çıxış</a>
                 </span></center>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+
+                    <?php   }
+                    else{ ?>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="navbarli3">
+                                <center>  <span class="navbarli3icon glyphicon glyphicon-user">
+                  <a href="<?= base_url(); ?>auth/">Giriş / Qeydiyyat</a>
+                </span></center>
+                            </li>
+                        </ul>
+                    <?php }
+
+                    ?>
                 </div>
             </div>
         </nav>
@@ -99,11 +124,17 @@
             <h2 style="font-size: 25px; padding-bottom: 20px; font-weight: 700">Yeni elan</h2>
 
             <div class="col-md-8 main">
-                <form action="<?= base_url('addAds/update/').$list->id; ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url('addAds/update/').$list['id']; ?>" method="post" enctype="multipart/form-data">
 
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="category">Əmlakın növü</label>
+                            <?php
+                            if (form_error('hometype')) {
+                                ?>
+                                <label for="category" style="color: red;">* Əmlakın növü</label>
+                            <?php }else { ?>
+                                <label for="category"> Əmlakın növü</label>
+                            <?php } ?>
                         </div>
                         <div class="col-md-7">
                             <select class="form-control" id="category" name="hometype">
@@ -116,7 +147,13 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Şəhər</label>
+                            <?php
+                            if (form_error('citylist')) {
+                                ?>
+                                <label for="category" style="color: red;">* Şəhər</label>
+                            <?php }else { ?>
+                                <label for="category"> Şəhər</label>
+                            <?php } ?>
                         </div>
                         <div class="col-md-7">
                             <select class="form-control" id="city" name="citylist">
@@ -129,7 +166,13 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Rayon</label>
+                            <?php
+                            if (form_error('hometype')) {
+                                ?>
+                                <label for="category" style="color: red;">* Rayon</label>
+                            <?php }else { ?>
+                                <label for="category"> Rayon</label>
+                            <?php } ?>
                         </div>
                         <div class="col-md-7">
                             <select class="form-control" id="town" name="townlist" disabled='false'>
@@ -139,7 +182,13 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Metro</label>
+                            <?php
+                            if (form_error('hometype')) {
+                                ?>
+                                <label for="category" style="color: red;">* Metro</label>
+                            <?php }else { ?>
+                                <label for="category"> Metro</label>
+                            <?php } ?>
                         </div>
                         <div class="col-md-7">
                             <select class="form-control" id="metro" name="metrolist" disabled=''>
@@ -149,15 +198,27 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Qiymət</label>
+                            <?php
+                            if (form_error('price')) {
+                                ?>
+                                <label for="category" style="color: red;">* Qiymət</label>
+                            <?php }else { ?>
+                                <label for="category"> Qiymət</label>
+                            <?php } ?>
                         </div>
                         <div class="col-md-7">
-                            <input type="text" class="form-control" id="usr" name="price" value="<?= $list->ads_price ?>">
+                            <input type="text" class="form-control" id="usr" name="price" value="<?= $list['ads_price'] ?>">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Otaq sayı</label>
+                            <?php
+                            if (form_error('roomlist')) {
+                                ?>
+                                <label for="category" style="color: red;">* Otaq sayı</label>
+                            <?php }else { ?>
+                                <label for="category"> Otaq sayı</label>
+                            <?php } ?>
                         </div>
                         <div class="col-md-7">
                             <select class="form-control" id="category" name="roomlist">
@@ -170,48 +231,78 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Ünvan</label>
+                            <?php
+                            if (form_error('adress')) {
+                                ?>
+                                <label for="category" style="color: red;">* Ünvan</label>
+                            <?php }else { ?>
+                                <label for="category"> Ünvan</label>
+                            <?php } ?>
                         </div>
                         <div class="col-md-7">
-                            <input type="text" class="form-control" id="usr" name="adress" value="<?= $list->ads_address ?>">
+                            <input type="text" class="form-control" id="usr" name="adress" value="<?= $list['ads_address'] ?>">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Əlavə məlumat</label>
+                            <?php
+                            if (form_error('comment')) {
+                                ?>
+                                <label for="category" style="color: red;">* Əlavə məlumat</label>
+                            <?php }else { ?>
+                                <label for="category"> Əlavə məlumat</label>
+                            <?php } ?>
                         </div>
                         <div class="col-md-7">
                         <textarea class="form-control textarea" rows="5" cols="15" id="comment"
-                                  style="margin-bottom: 10px;" name="comment" ><?= $list->ads_about ?></textarea>
+                                  style="margin-bottom: 10px;" name="comment" ><?= $list['ads_about'] ?></textarea>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Əlaqəli şəxs</label>
+                            <?php
+                            if (form_error('contact')) {
+                                ?>
+                                <label for="category" style="color: red;">* Əlaqəli şəxs</label>
+                            <?php }else { ?>
+                                <label for="category"> Əlaqəli şəxs</label>
+                            <?php } ?>
                         </div>
                         <div class="col-md-7">
 
-                                <input type="text" class="form-control" id="usr" name="contact" value="<?= $list->ads_user_name ?>">
-
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label for="">Telefon</label>
-                        </div>
-                        <div class="col-md-7">
-
-                                <input type="text" class="form-control" id="usr" name="phone" value="<?= $list->ads_user_phone ?>">
+                                <input type="text" class="form-control" id="usr" name="contact" value="<?= $list['ads_user_name'] ?>">
 
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Email</label>
+                            <?php
+                            if (form_error('contact')) {
+                                ?>
+                                <label for="category" style="color: red;">* Telefon</label>
+                            <?php }else { ?>
+                                <label for="category"> Telefon</label>
+                            <?php } ?>
                         </div>
                         <div class="col-md-7">
 
-                                <input type="text" class="form-control" id="usr" name="email" value="<?= $list->ads_user_email ?>">
+                                <input type="text" class="form-control" id="usr" name="phone" value="<?= $list['ads_user_phone'] ?>">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <?php
+                            if (form_error('email')) {
+                                ?>
+                                <label for="category" style="color: red;">* Email</label>
+                            <?php }else { ?>
+                                <label for="category"> Email</label>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-7">
+
+                                <input type="text" class="form-control" id="usr" name="email" value="<?= $list['ads_user_email'] ?>">
 
                         </div>
                     </div>
@@ -220,9 +311,9 @@
                             <label for="">Şəkil</label>
                         </div>
                         <div class="col-md-7">
-                            <input type="file" name="photo" id="file-4" class="inputfile inputfile-3"
-                                   data-multiple-caption="{count} şəkil seçilmişdir" multiple/>
-                            <label for="file-4"><span>Şəkil seç&hellip;</span></label>
+<!--                            <input type="file" name="photo" id="file-4" class="inputfile inputfile-3"-->
+<!--                                   data-multiple-caption="{count} şəkil seçilmişdir" multiple/>-->
+<!--                            <label for="file-4"><span>Şəkil seç&hellip;</span></label>-->
                         </div>
                     </div>
                     <div class="row">

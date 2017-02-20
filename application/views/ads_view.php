@@ -307,12 +307,16 @@ if (isset($_SESSION['logout']) == FALSE) {
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="">Şəkil</label>
+<!--                            --><?php
+//                            if (form_error('photo')) {
+//                                ?>
+<!--                                <label for="category" style="color: red;">* Şəkil</label>-->
+<!--                            --><?php //}else { ?>
+                                <label for="category"> Şəkil</label>
+<!--                            --><?php //} ?>
                         </div>
                         <div class="col-md-7">
-                            <input type="file" name="photo" id="file-4" class="inputfile inputfile-3"
-                                   data-multiple-caption="{count} şəkil seçilmişdir" multiple/>
-                            <label for="file-4"><span>Şəkil seç&hellip;</span></label>
+                            <input type="file" name="uploadimage[]" class="form-control" id="img" multiple="multiple">
                         </div>
                     </div>
                     <div class="row">
