@@ -140,7 +140,7 @@
                                    placeholder="E-poçt ünvanı">
                         </div>
 
-                            
+
                         <div class="input-group araMesafesi">
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-lock"></span>
@@ -156,7 +156,7 @@
 
                         <!-- <input type="checkbox"><span class="rem">Məni yadda saxla!</span> -->
 
-                       
+
 
 
                            <?php if(isset($_SESSION['invalidmailorpassword'])){ ?>
@@ -164,11 +164,11 @@
                             <div style="padding-left: 13px">
                                 <p style="color:#E57C67"><?= $_SESSION['invalidmailorpassword']?></p>
                             </div>
-                            
-                            <?php  
+
+                            <?php
                              unset($_SESSION['invalidmailorpassword']); }
                             ?>
-                            
+
 
 
                         <br><br>
@@ -185,7 +185,7 @@
 
 
                 <div class="col-md-6">
-                    
+
                       <div class="input-group araMesafesi">
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-user"></span>
@@ -200,9 +200,9 @@
                      <?php   }
                         ?>
 
-                            
-                       
-                        
+
+
+
 
                         <div class="input-group araMesafesi">
                             <div class="input-group-addon">
@@ -237,13 +237,13 @@
                             <div style="text-align: center">
                                 <p style="color:#E57C67"><?= $_SESSION['passwordlong']?></p>
                             </div>
-                            <?php  
+                            <?php
                              unset($_SESSION['passwordlong']); }
                             ?>
-                     
+
                 </div>
 
-                      
+
 
 
 <!-- ------------------------------------------------------------- -->
@@ -251,7 +251,7 @@
 
 
                 <div class="col-md-6">
-                      
+
                       <div class="input-group araMesafesi">
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-earphone "><span
@@ -276,7 +276,7 @@
                             </div>
                      <?php   }
                         ?>
-                        <?php 
+                        <?php
                         if (isset($_SESSION['invalidphonenumber'])) { ?>
                             <div style="text-align: center">
                                 <p style="color:#E57C67"><?= $_SESSION['invalidphonenumber'] ?></p>
@@ -299,12 +299,12 @@
                      <?php   }
                         ?>
 
-                        <?php 
+                        <?php
                         if (isset($_SESSION['invalidemail'])) { ?>
                         <div style="text-align: center">
                                 <p style="color:#E57C67"><?= $_SESSION['invalidemail']; ?></p>
                             </div>
-                           
+
                       <?php unset($_SESSION['invalidemail']); }
                          ?>
 
@@ -324,17 +324,17 @@
                      <?php   }
                         ?>
 
-                        <?php 
+                        <?php
                         if (isset($_SESSION['invalidbdate'])) { ?>
                         <div style="text-align: center">
                                 <p style="color:#E57C67"><?= $_SESSION['invalidbdate']; ?></p>
                             </div>
-                           
+
                       <?php unset($_SESSION['invalidbdate']); }
                          ?>
 
 
-                         
+
                 </div>
 
 
@@ -352,7 +352,7 @@
 
                     <!-- </div> -->
 
-                      
+
                         <!-- <button type="submit" class="btn btn-secondary btn1">Yadda saxla</button> -->
 
                     </form>

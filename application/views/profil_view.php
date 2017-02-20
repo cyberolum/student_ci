@@ -173,10 +173,10 @@ $user  = $_SESSION['user'];
 
 <div class="container" style="margin-top:25px;">
     <div class="row">
-        <?php foreach ($showAds as $allAds) {?>
+        <?php foreach ($showAds as $key => $allAds) {?>
         <div class="col-md-12 yerlesdirdiyiElanlar">
             <div class="col-md-4">
-                <img class="ElanSekil" src="<?= base_url(); ?>uploads/ev1.jpg" alt="">
+                <img class="ElanSekil" src="<?= base_url(); ?>uploads/<?= $allAds['photo'] ?>" alt="">
             </div>
 
             <div class="col-md-8">
@@ -204,8 +204,9 @@ $user  = $_SESSION['user'];
                             <h4 class="AdSoyad"><?= $allAds['ads_user_name'] ?></h4>
                         </div>
                         <div class="col-md-4">
-                            <a href="<?= base_url('addAds/delete/'.$allAds['id']);?>">Sil</a>
-                            <a href="<?= base_url('addAds/updatePage/'.$allAds['id']); ?>">Yenile</a>
+                            <a href="<?= base_url('addAds/delete/'.$allAds['id']);?>">[Sil]</a>
+                            <a href="<?= base_url('addAds/updatePage/'.$allAds['id']); ?>">[Yenile]</a>
+                            <a href="<?= base_url('single/about/'.$allAds['id']) ?>">[Etrafli]</a>
                         </div>
                     </div>
 

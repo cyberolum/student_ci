@@ -364,15 +364,12 @@
                 <?php foreach ($mainAds as $ads) { ?>
                     <div class="col-md-4  UmumiElan" style="border-left:3px solid #E7DFDD">
                         <div class="col-md-12 ">
-                            <img class="ElanSekil" src="<?= base_url(); ?>uploads/ev1.jpg" alt="">
+                            <img class="ElanSekil" style="height: 230px;" src="<?= base_url(); ?>uploads/<?= $ads['photo'] ?>" alt="">
                         </div>
                         <div class="col-md-12 ">
                             <h3 class="h33"><?= $ads['ads_address'] ?></h3>
                         </div>
-                        <div class="col-md-12 ">
-                            <a><i class="fa fa-map-marker Unvan" aria-hidden="true"></i></a>
-                            <h4 class="UnvaniHaqqindaMelumat"><?= $ads['mark'] ?></h4>
-                        </div>
+
                         <div class="col-md-12 " style="background: lavender; top:40px; height: 80px; ">
                             <div class="col-md-12 " style="top:20px;">
                                 <h6 class="OtaqSayi" style="margin:0;padding: 0;margin-left: 65px;">Otaq sayı</h6>
@@ -383,14 +380,20 @@
                             </div>
 
                         </div>
-                        <div class="col-md-12" style="top:40px; height:100px;">
+                        <div class="col-md-12" style="top:40px; height:50px;">
                             <div class="col-md-12" style="margin-top:30px; margin-left:-30px">
                                 <div class="col-md-8">
                                     <a><i class="fa fa-user Sahibkar" aria-hidden="true"></i></a>
                                     <h4 class="AdSoyad"><?= $ads['ads_user_name'] ?></h4>
                                 </div>
                             </div>
-
+                        </div>
+                        <div class="col-md-12" style="top:40px; height:100px;">
+                            <div class="col-md-12" style="margin-top:30px; margin-left:-30px">
+                                <div class="col-md-8">
+                                    <a href="<?= base_url('single/about/'.$ads['id']) ?>">Etrafli</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 <?php } ?>
