@@ -246,13 +246,99 @@
 </section>
 
 
-<iframe width="100%" height="600px" frameborder="0" scrolling="no" marginheight="0"
-        src="https://maps.google.com/maps?q=Baku, AZ, &t=&z=13&ie=UTF8&iwloc=&output=embed" marginwidth="0"><a
-            class="addmaps" href="http://www.map-embed.com/wordpress-themes/" id="get-map-data"
-            mce_href="http://maps.google.com/maps/api/js?sensor=false">Baku, AZ, </a>
-    <style>#gmap_canvas img {
-        }</style>
-</iframe>
+
+
+
+<!--ilkin xerite start-->
+
+
+<!--<iframe width="100%" height="600px" frameborder="0" scrolling="no" marginheight="0">Baku, AZ,-->
+    <style>
+        html, body {
+            height: 600px;
+            margin: 0;
+            padding: 0;
+
+        }
+        #map {
+            height: 100%;
+
+        }
+        #teg{
+            text-decoration: none;
+            color: white;
+
+        }
+        #all1,.etrafli{
+            background:#00AAFF;
+            display:inline-block;
+            border-radius:2px;
+            padding:5px;
+        }
+        #all1,.etrafli:hover{
+            background: blue;
+        }
+    </style>
+    <div id="map"></div>
+    <script>
+
+        // This example displays a marker at the center of Australia.
+        // When the user clicks the marker, an info window opens.
+
+        function initMap() {
+            var uluru = {lat: 40.409262, lng: 49.867092};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 9,
+                center: uluru
+            });
+
+            var contentString = '<div id="content" style="width:350px; height:167px;"><br>'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<div style="display:inline-block; float:right"><a href="#"><img style="width: 200px; height: 150px; border-radius:2px; margin: 2px" src="<?= base_url(); ?>uploads/img/img1.jpg" alt=""/></a></div>'+
+                '<div style="display:inline-block"><h1 id="firstHeading" class="firstHeading" >Mingecevir</h1></div><br>'+
+
+                '<div id="bodyContent" style="display:inline-block;"><p><b>Otaq sayı- 5</b></p></div><br>' +
+                    '<div style="width:100%;height:46px"></div>'+
+                '<div id="bodyContent all1" ><span class="etrafli"><a href="#" id="teg"><b>Ətraflı</b></a></span></div>' +
+
+
+            '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+                title: 'uluru'
+            });
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+        }
+
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO0Mz2IpdMPCfc3Y3Pl071-qdDnvbhPow&signed_in=true&callback=initMap">
+
+    </script>
+<!--</iframe>-->
+
+
+<!--ilkin xerite end-->
+
+
+
+
+
+
+
+
+
+
+
 
 
 <section class="SonElanlarinSiyasi">
