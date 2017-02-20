@@ -117,7 +117,7 @@
         <div class="row">
 
             <div class="col-lg-8 contact-us-form">
-                <form action="" method="post">
+                <form action="<?= base_url(); ?>adminController/send" method="post">
                     <input type="hidden" name="_token" value="">
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" id="name" value="" placeholder="Ad, Soyad">
@@ -129,7 +129,7 @@
                         <textarea id="message" class="form-control" name="message" rows="8" cols="80"
                                   placeholder="Mesaj"></textarea>
                     </div>
-                    <button type="button" name="button" class=" empty21 btn btn-lg btn-block elaveEtNew">Göndər</button>
+                    <button type="submit" name="button" class=" empty21 btn btn-lg btn-block elaveEtNew">Göndər</button>
                 </form>
             </div>
 

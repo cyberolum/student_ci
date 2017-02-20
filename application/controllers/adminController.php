@@ -86,6 +86,35 @@
 
 
 
+//    udygfnypowidlffe
+
+        public function send(){
+
+            $config= Array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'smtp.gmail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'evyoldasi@gmail.com',
+            'smtp_pass' => 'kablosuz123'
+        );
+
+            $this->load->library('email',$config);
+//            $this->email->set_newline("\r\n");
+            $this->email->from($this->input->post('email'),$this->input->post('name'));
+            $this->email->to('evyoldasi@gmail.com');
+//            $this->email->subject('$this->input->post('message')');
+            $this->email->message($this->input->post('message'));
+
+
+           if($this->email->send()){
+            echo 'ura';
+           }else{
+               echo show_error( $this->email->print_debugger());
+           }
+
+
+        }
+
     }
 
 
